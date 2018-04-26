@@ -7,7 +7,6 @@
 <div id="main-container">
 
 	<header>
-
 		<!--Navigasi bar kiei -->
 		<nav>
 			<ul>
@@ -21,7 +20,7 @@
 		</nav>
 		<!-- TEST-->
 		<!-- LOGO FMDW-->
-		<img src="images/FMDW.png" alt="Logo FMDW" id="logo" style="width: 50px; height: 50px;" />
+		<img src="images/FMDW.png" alt="Logo FMDW" id="logo" />
 
 		<!-- Navigasi bar kanan -->
 		<!-- Search Box -->
@@ -33,10 +32,6 @@
       			<a class="logout" href="#">LOG OUT</a>
     		</form>
   		</div>
-
-
-
-
 	</header>
 
 	<content>
@@ -52,10 +47,12 @@
 		</div>
 	</content>
 
-	<div id="footer">
+	<footer>
+		<div id="footer">
 		<hr>
 		<p>Copyright 2018 FM DW. All Rights Reserved</p>
 	</div>
+	</footer>
 </div>
 </body>
 </html>
