@@ -21,7 +21,7 @@
 		</nav>
 
 		<!-- LOGO FMDW-->
-		<img src="images/FMDW.png" alt="Logo FMDW" id="logo" style="width: 50px; height: 50px;" />
+		<img src="images/FMDW.png" alt="Logo FMDW" id="logo"  />
 
 		<!-- Navigasi bar kanan -->
 		<!-- Search Box -->
