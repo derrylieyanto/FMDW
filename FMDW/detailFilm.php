@@ -4,7 +4,35 @@
 	<title>Detail Film</title>
 </head>
 <body>
-<header></header>
+ <div id="main-container"> 
+<header>
+    <!--Navigasi bar kiei -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Film</a></li>
+        <li><a href="#">Member</a></li>
+        <li><a href="#">Rent</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Report</a></li>
+      </ul>
+    </nav>
+
+    <!-- LOGO FMDW-->
+    <img src="images/FMDW.png" alt="Logo FMDW" id="logo" />
+
+    <!-- Navigasi bar kanan -->
+    <!-- Search Box -->
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
+            <label>Hello. <?php ?></label>
+            <a class="logout" href="#">LOG OUT</a>
+        </form>
+      </div>
+  </header>
+
 <content>
 	Film >> <a href="#">Detail Film</a>
 	<h1>Detail Film</h1>
@@ -24,6 +52,14 @@
   	<p><h2>Tanggal Rilis</h2></p>
   	29-jan-2018
 </content>
-<footer></footer>
+
+<footer>
+  <div id="footer">
+    <hr>
+    <p>Copyright 2018 FM DW. All Rights Reserved</p>
+  </div>
+</footer>
+
+</div>
 </body>
 </html>

@@ -5,8 +5,9 @@
 	<title>RENT</title>
 </head>
 <body>
-	<header>
+	<div id="main-container">
 
+	<header>
 		<!--Navigasi bar kiei -->
 		<nav>
 			<ul>
@@ -32,58 +33,28 @@
       			<a class="logout" href="#">LOG OUT</a>
     		</form>
   		</div>
-
-
-
-
 	</header>
 
 	<content>
-		<div class="form-container">
-			<form action="/action_page.php">
-				<label class="form-title">Rent</label><br><br>
-				<label>Judul Film</label><br>
-				<input type="text" name="judulfilm"><br><br>
-				<label>ID Member</label><br>
-				<input type="text" name="idmember"><br><br>
-				<label>Tanggal Pinjam</label><br>
-				<input type="date" name="tanggalpinjam"><br><br>
-				<label>Durasi Peminjaman</label><br>
-				<input type="number" name="durasipeminjaman"><br><br>
-				<label>Metode Pembayaran</label><br>
-				<input type="radio" name="gender" value="Cash" checked> Cash<br>
-  				<input type="radio" name="gender" value="Transfer"> Transfer<br><br>
-  				<input type="submit" value="Submit"><br>
-  				<a class="print-button" href="#">PRINT</a><br>
+		<div class="col md-1">
+			<h1>RENT SYSTEM</h1>
+		</div>
+		<div class="col md-2">
+			<form action="action_page.php"">
+				<a class="rent" href="#">RENT</a>
+				<a class="extension" href="#">EXTENSION</a>
+				<a class="return" href="#">RETURN</a>
 			</form>
 		</div>
 	</content>
-=======
-	<title>rent</title>
-</head>
-<body>
-	<header>
-		
-	</header>
-<!--         ==============================       -->	
-	<content>
-		 >> <a href="#">Rent</a>
-		 <p>RENT</p>
-		<form action="rent.html">
-		<input type="submit" value="RENT">
-		</form>
-		<form action="extention.html">
-		<input type="submit" value="EXTENTION">
-		</form>
-		<form action="return.html">
-		<input type="submit" value="RETURN">
-		</form>
-	</content>
-<!--         ==============================       -->	
+
 	<footer>
-		
+		<div id="footer">
+		<hr>
+		<p>Copyright 2018 FM DW. All Rights Reserved</p>
+	</div>
 	</footer>
->>>>>>> bd4be00eb5b1f0813f0aab7b19e7bdf6eac1738d
+</div>
 
 </body>
 </html>

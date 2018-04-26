@@ -4,8 +4,8 @@
 	<title>RENT FILM</title>
 </head>
 <body>
+<div id="main-container">	
 	<header>
-
 		<!--Navigasi bar kiei -->
 		<nav>
 			<ul>
@@ -31,10 +31,6 @@
       			<a class="logout" href="#">LOG OUT</a>
     		</form>
   		</div>
-
-
-
-
 	</header>
 
 	<content>
@@ -58,5 +54,12 @@
 		</div>
 	</content>
 
+	<footer>
+		<div id="footer">
+		<hr>
+		<p>Copyright 2018 FM DW. All Rights Reserved</p>
+	</div>
+	</footer>
+</div>
 </body>
 </html>
