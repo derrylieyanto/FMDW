@@ -52,12 +52,12 @@
 		<div id="members">
 			<table>
 				<tr>
-					<td>asd</td>
-					<td colspan="2">dsa</td>
+					<td>Shigeo Tokuda</td>
+					<td><img src="mahart.png"></td>
+					<td><button type="submit" id="remove"><i class="delete"></i></button></td>
 				</tr>
 				<tr>
-					<td>ewq</td>
-					<td>qwe</td>
+					<td>@shigeo69</td>
 				</tr>
 			</table>
 			<div>
