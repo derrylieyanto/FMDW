@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 	<title>RENT</title>
 </head>
 <body>
@@ -57,6 +58,32 @@
 			</form>
 		</div>
 	</content>
+=======
+	<title>rent</title>
+</head>
+<body>
+	<header>
+		
+	</header>
+<!--         ==============================       -->	
+	<content>
+		 >> <a href="#">Rent</a>
+		 <p>RENT</p>
+		<form action="rent.html">
+		<input type="submit" value="RENT">
+		</form>
+		<form action="extention.html">
+		<input type="submit" value="EXTENTION">
+		</form>
+		<form action="return.html">
+		<input type="submit" value="RETURN">
+		</form>
+	</content>
+<!--         ==============================       -->	
+	<footer>
+		
+	</footer>
+>>>>>>> bd4be00eb5b1f0813f0aab7b19e7bdf6eac1738d
 
 </body>
 </html>
