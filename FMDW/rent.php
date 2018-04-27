@@ -72,9 +72,11 @@
 		</div>
 		<div class="main-button">
 			<form action="action_page.php"">
+				<!--button tidak bisa dibuat untuk link ke html local lain, tlg direvisi-->
 				<button type="button">RENT</button>
 				<button type="button">EXTENSION</button>
 				<button type="button">RETURN</button>
+
 			</form>
 		</div>
 	</content>
