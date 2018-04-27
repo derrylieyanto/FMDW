@@ -73,9 +73,10 @@
 		<div class="main-button">
 			<form action="action_page.php"">
 				<!--button tidak bisa dibuat untuk link ke html local lain, tlg direvisi-->
-				<button type="button">RENT</button>
-				<button type="button">EXTENSION</button>
-				<button type="button">RETURN</button>
+				<!-- BISA BOSSS -->
+				<button onclick="location.href='rental.php'" type="button">RENT</button>
+				<button onclick="location.href='extension.php'" type="button">EXTENSION</button>
+				<button onclick="location.href='return.php'" type="button">RETURN</button>
 
 			</form>
 		</div>
