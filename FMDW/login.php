@@ -98,8 +98,7 @@
     			<br>
     			<input type="password" placeholder="Enter Password" name="psw" required>
     			<br>
-
-    			<button type="submit">Login</button>
+    			<input type="submit" name="submit" value="LOGIN">
     			<br>
   			</div>
 
