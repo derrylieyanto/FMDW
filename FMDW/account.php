@@ -15,12 +15,12 @@
 		<img src="images/FMDW.png" alt="logo FMDW" class="logo">
 		</div>
 		<div class="topnav">
-	 			<a href="#">Home</a>
-				<a href="#">Film</a>
-				<a href="#">Member</a>
-				<a href="#">Rent</a>
+	 			<a href="home.php">Home</a>
+				<a href="film.php">Film</a>
+				<a href="member.php">Member</a>
+				<a href="rent.php">Rent</a>
 				<a class="active" href="#">Account</a>
-				<a href="#">Report</a>
+				<a href="report.php">Report</a>
 	  		
   			<div class="search-container">
     			<form action="/action_page.php">

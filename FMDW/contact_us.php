@@ -1,3 +1,4 @@
+<!--user mode, belum dimasukin ke root mode-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +17,11 @@
 		</div>
 		<div class="topnav">
 	 			<a class="active" href="#">Home</a>
-				<a href="#">Film</a>
-				<a href="#">Member</a>
-				<a href="#">Rent</a>
-				<a href="#">Account</a>
-				<a href="#">Report</a>
+				<a href="film.php">Film</a>
+				<a href="member.php">Member</a>
+				<a href="rent.php">Rent</a>
+				<a href="account.php">Account</a>
+				<a href="report.php">Report</a>
 	  		
   			<div class="search-container">
     			<form action="/action_page.php">
