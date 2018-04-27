@@ -3,6 +3,7 @@
 <head>
 	<title>LOGIN</title>
 	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	
 </head>
 <body>
