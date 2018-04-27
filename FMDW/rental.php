@@ -4,6 +4,7 @@
 	<title>RENT FILM</title>
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
+	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -34,6 +35,11 @@
 	</header>
 
 	<content>
+		<ul class="breadcrumb">
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">Rent</a></li>
+		  <li>Rental</li>
+		</ul>
 		<div class="form-container">
 			<form action="/action_page.php">
 				<label class="form-title">Rent</label><br><br>

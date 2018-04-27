@@ -34,6 +34,9 @@
 	</header>
 
 	<content>
+		<ul class="breadcrumb">
+		  <li>Home</li>
+		</ul>
 		<div class="col md-1">
 			<h1>RENT SYSTEM</h1>
 		</div>

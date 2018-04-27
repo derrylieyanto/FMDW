@@ -34,6 +34,11 @@
   </header>
 
 	<content>
+    <ul class="breadcrumb">
+      <li><a href="home.php">Home</a></li>
+      <li><a href="film.php">Film</a></li>
+      <li>Tambah Film</li>
+    </ul>
 		<h1>Penambahan Film</h1>
 		<h3>Isi data-data berikut untuk menambah film</h3>
 		<form action="/action_page.php">

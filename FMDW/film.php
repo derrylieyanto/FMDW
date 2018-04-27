@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
+	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 =======
 	<style type="text/css">
@@ -48,7 +49,10 @@
   		</div>
 	</header>
 	<content>
-		>>FILM
+		<ul class="breadcrumb">
+		  <li><a href="home.php">Home</a></li>
+		  <li>Film</li>
+		</ul>
 		<aside>
 			<p></p>
 			<table><tr><th>Category</th></tr></table>

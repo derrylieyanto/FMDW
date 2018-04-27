@@ -5,6 +5,7 @@
 	<title>RENT</title>
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
+	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="stickymenu.js"></script>
 	<style type="text/css">
@@ -61,8 +62,10 @@
 	</header>
 
 	<content>
-		<div class="breadcrumb">
-			>> Rent
+		<ul class="breadcrumb">
+		  <li><a href="home.php">Home</a></li>
+		  <li>Rent</li>
+		</ul>
 		</div>
 		<div class="main-title">
 			<h1>RENT SYSTEM</h1>

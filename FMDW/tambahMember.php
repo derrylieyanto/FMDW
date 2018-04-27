@@ -4,6 +4,7 @@
 	<title>TAMBAH MEMBER</title>
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
+	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -34,6 +35,11 @@
 	</header>
 
 	<content>
+		<ul class="breadcrumb">
+		  <li><a href="home.php">Home</a></li>
+		  <li><a href="account.php">Account</a></li>
+  		  <li>Tambah Member</li>
+		</ul>
 		<h4>First Name</h4>
 		<input type="text" name="FirstName" placeholder="Enter Your First Name">
 		<h4>Last Name</h4>

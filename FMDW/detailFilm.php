@@ -4,6 +4,7 @@
 	<title>Detail Film</title>
   <link rel="stylesheet" type="text/css" href="style/header.css">
   <link rel="stylesheet" type="text/css" href="style/footer.css">
+  <link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -34,7 +35,11 @@
   </header>
 
 <content>
-	Film >> <a href="#">Detail Film</a>
+	<ul class="breadcrumb">
+    <li><a href="home.php">Home</a></li>
+    <li><a href="film.php">Film</a></li>
+    <li>Black Panther</li>
+  </ul>
 
 	<table style="width:100%">
   <tr>
