@@ -2,37 +2,34 @@
 <html>
 <head>
 	<title>Detail Member</title>
-	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style/header.css">
+	<link rel="stylesheet" type="text/css" href="style/footer.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-	<div id="main-container">
+<div id="main-container">
 
 	<header>
-		<!--Navigasi bar kiei -->
-		<nav>
-			<ul>
-				<li><a href="home.php">Home</a></li>
-				<li><a href="film.php">Film</a></li>
-				<li><a class="active" href="member.php">Member</a></li>
-				<li><a href="rent.php">Rent</a></li>
-				<li><a href="account.php">Account</a></li>
-				<li><a href="report.php">Report</a></li>
-			</ul>
-		</nav>
-
-		<!-- LOGO FMDW-->
-		<img src="images/FMDW.png" alt="Logo FMDW" id="logo" />
-
-		<!-- Navigasi bar kanan -->
-		<!-- Search Box -->
-		<div class="search-container">
-    		<form action="/action_page.php">
-      			<input type="text" placeholder="Search.." name="search">
-      			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
-      			<label>Hello. <?php ?></label>
-      			<a class="logout" href="#">LOG OUT</a>
-    		</form>
+			
+		<div class="logo-container">	
+		<img src="images/FMDW.png" alt="logo FMDW" class="logo">
+		</div>
+		<div class="topnav">
+	 			<a href="home.php">Home</a>
+				<a href="film.php">Film</a>
+				<a class="active" href="member.php">Member</a>
+				<a href="rent.php">Rent</a>
+				<a href="account.php">Account</a>
+				<a href="report.php">Report</a>
+	  		
+  			<div class="search-container">
+    			<form action="/action_page.php">
+      				<input type="text" placeholder="Search.." name="search">
+      				<button type="submit"><i class="fa fa-search"></i></button>
+      				<label>Hello. <?php ?></label>
+      				<a class="logout" href="#">LOG OUT</a>
+    			</form>
+  			</div>
   		</div>
 	</header>
 
