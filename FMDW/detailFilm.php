@@ -38,7 +38,7 @@
 	<table style="width:100%">
   <tr>
     <td><h1>Detail Film</h1></td> 
-    <td rowspan="3"><img id="poster" src="images/black_panther.jpg" height="400px" width="200px"></td> <!--Ambil dari database-->
+    <td rowspan="3"><img id="poster" src="images/film5.jpg" height="300px" width="225px"></td> <!--Ambil dari database-->
   </tr>
   <tr>
     <td><h2>Judul Film</h2></td>

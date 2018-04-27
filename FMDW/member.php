@@ -45,7 +45,7 @@
 			<table>
 				<tr>
 					<td>Shigeo Tokuda</td>
-					<td><img src="mahart.png"></td>
+					<td><img src="images/mahart.png"></td>
 					<td><button type="submit" id="remove"><i class="delete"></i></button></td>
 				</tr>
 				<tr>
