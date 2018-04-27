@@ -58,6 +58,8 @@
 				<input type="radio" name="status_member" value="aktif" checked="checked">Aktif <br/>
 				<input type="radio" name="status_member" value="tidakaktif">Tidak Aktif
 			</form>
+			<p></p>
+			<input type="submit" name="submit" value="Save">
 		</div>
 
 	</content>
