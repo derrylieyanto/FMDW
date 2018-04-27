@@ -31,7 +31,7 @@
   			</div>
   		</div>
 	</header>
-
+	
 	<footer>
 		<div id="footer">
 		<hr>
