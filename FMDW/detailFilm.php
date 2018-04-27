@@ -35,20 +35,21 @@
 
 <content>
 	Film >> <a href="#">Detail Film</a>
-	<h1>Detail Film</h1>
 
 	<table style="width:100%">
   <tr>
     <td><h1>Detail Film</h1></td> 
-    <td rowspan="3"><img src="poster.jpg"></td> <!--Ambil dari database-->
+    <td rowspan="3"><img id="poster" src="images/black_panther.jpg" height="400px" width="200px"></td> <!--Ambil dari database-->
   </tr>
   <tr>
     <td><h2>Judul Film</h2></td>
-    <td><!--Ambil dari database-->Blek dogi</td>
+  </tr>
+  <tr>
+    <td><!--Ambil dari database-->Black Panther</td>
   </tr>
 </table>
 	<p><h2>Sinopsis</h2></p>
-  	<p>dfghhgfkalhuihfigha ishfdikhasfhjaslkdhsldfa flasdjhf sdfhskl dfsahf asjdf asdjf safh sasfhskfhasdfjkshadfk sagdfklaseghr gsaldfhgsadfla dfhgsadgfs fhjks fshf ksf s fs fsfhsk fs fsf sfhskfhsajfhjaldjhfasdhfkja sdjfh asdjfhskjdhfaskld fhalsufie whrlsagdfh adfjlsagfs kslf sakdfj sadjkfsa kfjhaksdfghs kasjdhf sdkfalshdf asdfjk sdkflhueiwyoprq.</p>
+  	<p>After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king. When a powerful enemy suddenly reappears, T'Challa's mettle as king -- and as Black Panther -- gets tested when he's drawn into a conflict that puts the fate of Wakanda and the entire world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people.</p>
   	<p><h2>Tanggal Rilis</h2></p>
   	29-jan-2018
 </content>
