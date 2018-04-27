@@ -31,8 +31,21 @@
   			</div>
   		</div>
 	</header>
-	
-	
+
+	<content>
+		<h4>First Name</h4>
+		<input type="text" name="FirstName" placeholder="Enter Your First Name">
+		<h4>Last Name</h4>
+		<input type="text" name="LastName" placeholder="Enter Your Last Name">
+		<h4>Address</h4>
+		<input type="text" name="Address" placeholder="Enter Your Address">
+		<h4>Birth Date</h4>
+		<input type="Date" name="BirthDate">
+		<h4>Phone Number</h4>
+		<input type="text" name="PhoneNumber" placeholder="Enter Your Phone Number"></br></br>
+		<input type="submit" name="submit" value="Tambah Member">
+	</content>
+
 	<footer>
 		<div id="footer">
 		<hr>
