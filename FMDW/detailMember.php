@@ -12,12 +12,12 @@
 		<!--Navigasi bar kiei -->
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Film</a></li>
-				<li><a href="#">Member</a></li>
-				<li><a href="#">Rent</a></li>
-				<li><a href="#">Account</a></li>
-				<li><a href="#">Report</a></li>
+				<li><a href="home.php">Home</a></li>
+				<li><a href="film.php">Film</a></li>
+				<li><a class="active" href="member.php">Member</a></li>
+				<li><a href="rent.php">Rent</a></li>
+				<li><a href="account.php">Account</a></li>
+				<li><a href="report.php">Report</a></li>
 			</ul>
 		</nav>
 
