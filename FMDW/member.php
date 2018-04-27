@@ -31,7 +31,7 @@
   			</div>
   		</div>
 	</header>
-		
+	<content>	
 		<div id="member-search">
 			<ul>
 				<li><a href="#">Member List</a></li>
