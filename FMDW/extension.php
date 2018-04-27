@@ -2,34 +2,33 @@
 <html>
 <head>
 	<title>Extension</title>
+	<link rel="stylesheet" type="text/css" href="style/header.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="main-container">	
+<div id="main-container">
+
 	<header>
-		<!--Navigasi bar kiei -->
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Film</a></li>
-				<li><a href="#">Member</a></li>
-				<li><a href="#">Rent</a></li>
-				<li><a href="#">Account</a></li>
-				<li><a href="#">Report</a></li>
-			</ul>
-		</nav>
-
-		<!-- LOGO FMDW-->
-		<img src="images/FMDW.png" alt="Logo FMDW" id="logo"  />
-
-		<!-- Navigasi bar kanan -->
-		<!-- Search Box -->
-		<div class="search-container">
-    		<form action="/action_page.php">
-      			<input type="text" placeholder="Search.." name="search">
-      			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
-      			<label>Hello. <?php ?></label>
-      			<a class="logout" href="#">LOG OUT</a>
-    		</form>
+			
+		<div class="logo-container">	
+		<img src="images/FMDW.png" alt="logo FMDW" class="logo">
+		</div>
+		<div class="topnav">
+	 			<a class="active" href="#">Home</a>
+				<a href="#">Film</a>
+				<a href="#">Member</a>
+				<a href="#">Rent</a>
+				<a href="#">Account</a>
+				<a href="#">Report</a>
+	  		
+  			<div class="search-container">
+    			<form action="/action_page.php">
+      				<input type="text" placeholder="Search.." name="search">
+      				<button type="submit"><i class="fa fa-search"></i></button>
+      				<label>Hello. <?php ?></label>
+      				<a class="logout" href="#">LOG OUT</a>
+    			</form>
+  			</div>
   		</div>
 	</header>
 
