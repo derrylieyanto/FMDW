@@ -18,6 +18,7 @@
 			border: 1px solid Black;
 			border-collapse: collapse;
 			opacity: 0.95;
+			margin: 10px;
 		}
 
 		th, td{
@@ -33,6 +34,21 @@
 		tr:nth-child(even){
 			background-color: lightblue;
 		}
+
+		form{
+			margin: 10px;
+		}
+
+		select{
+			margin: 10px;
+		}
+
+		li{
+			margin: 10px;
+		}
+		
+
+		
 	</style>
 </head>
 <body>
