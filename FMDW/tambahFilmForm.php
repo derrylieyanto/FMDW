@@ -4,7 +4,64 @@
 	<title>Penambahan Film</title>
   <link rel="stylesheet" type="text/css" href="style/header.css">
   <link rel="stylesheet" type="text/css" href="style/footer.css">
+  <link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    h1,h3{
+      text-align: center;
+    }
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    form{
+      padding: 15px;
+    }
+    input[type=checkbox]{
+      margin: 10px;
+    }
+
+    input[type=submit]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover{
+    background-color: #45a049;
+    }
+
+    input[type=text]{
+      width: 55%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 20px;
+    }
+
+    input[type=text]:focus{
+      background-color: lightblue;
+    }
+
+    label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+    content{
+
+    }
+
+
+  </style>
 </head>
 <body>
 <div id="main-container">
@@ -42,7 +99,7 @@
 		<h1>Penambahan Film</h1>
 		<h3>Isi data-data berikut untuk menambah film</h3>
 		<form action="/action_page.php">
-  			<p><h2>Judul Film</h2></p> <input type="text" name="judulFilm"><br>
+  			<p><h2>Judul Film</h2></p> <input type="text" name="judulFilm" placeholder="Masukkan judul Film"><br>
   			<p><h2>Tanggal Rilis</h2></p><input type="date" name="date"><br>
   			<p><h2>Genre</h2></p>
   			<input type="checkbox" name="genres" value="action"> Action<br>
@@ -74,4 +131,4 @@
   </footer>
  </div> 
 </body>
-</html>
+</html>\
