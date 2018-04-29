@@ -6,6 +6,34 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			font-size: 11pt;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		table, th, td{
+			border: 1px solid Black;
+			border-collapse: collapse;
+			opacity: 0.95;
+		}
+
+		th, td{
+			padding: 10px;
+			text-align: center;
+		}
+
+		th{
+			background-color: blue;
+			color: white;
+		}
+
+		tr:nth-child(even){
+			background-color: lightblue;
+		}
+	</style>
 </head>
 <body>
 <div id="main-container">
