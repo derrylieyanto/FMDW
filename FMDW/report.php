@@ -6,19 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
-	<script src="js/jquery-3.3.1.min"></script>
-	<script type="text/javascript">
-		function Historis(){
-			$("#historis").hide().fadeIn(500);
-			$("#status").hide();
-		}
-		function Status(){
-			$("#status").hide();
-			$("#historis").hide().fadeIn(500);
-		}
-	</script>
-=======
 	<style type="text/css">
 		#wrapper{
 			margin: auto;
@@ -59,13 +46,32 @@
 		}
 
 		li{
+<<<<<<< HEAD
 			margin: 10px;
 		} 
+=======
+			margin: 5px;
+			display: inline-block;
+			list-style: none;
+		}
+
+		nav ul li{
+			border: 1px solid black;
+			border-collapse: collapse;
+			opacity: 0.95;
+			padding: 5px;
+			background-color: blue;
+			color: white;
+		}
+
+		nav ul li:hover{
+			background-color: lightblue;
+		}
+>>>>>>> 484990b53762216408e094d71d83ea4108b22f99
 		
 
 		
 	</style>
->>>>>>> 4986570e8e2f8c6faffa3b29af784602d4b6a990
 </head>
 <body>
 <div id="main-container">
@@ -101,6 +107,7 @@
 		  <li>Report</li>
 		</ul>
 		<h2>REPORT</h2>
+<<<<<<< HEAD
 		<div id="wrapper">
 			<nav>
 				<ul>
@@ -109,6 +116,8 @@
 				</ul>
 			</nav>
 			<div>
+=======
+>>>>>>> 484990b53762216408e094d71d83ea4108b22f99
 				<select name="filter">
 					<option value="search_by_no">No</option>
 					<option value="search_by_idtransaksi">ID Transaksi</option>
@@ -126,8 +135,16 @@
       				<button type="submit"><i class="fa fa-search"></i></button>
       			</form>
       		</div>
-      		<div id="historis">
-			<table>
+
+      		<div>
+			<nav>
+				<ul>
+					<li>HISTORIS</li>
+					<li>STATUS DVD</li>
+				</ul>
+			</nav>
+			<div>
+			<table id="historis">
 				<tr>
 					<th>No</th>
 					<th>ID Transaksi</th>
@@ -225,10 +242,8 @@
 					<td>Rp50,000.00</td>
 				</tr>
 			</table>
-			</div>
 
-			<div id="status">
-			<table>
+			<table id="status">
 				<tr>
 					<th>No</th>
 					<th>Nama Barang</th>
@@ -278,7 +293,6 @@
 					<td>Tidak Tersedia</td>
 				</tr>
 			</table>
-		</div>
 		</div>
 	</content>
 
