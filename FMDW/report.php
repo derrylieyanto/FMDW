@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<<<<<<< HEAD
 	<script src="js/jquery-3.3.1.min"></script>
 	<script type="text/javascript">
 		function Historis(){
@@ -17,6 +18,52 @@
 			$("#historis").hide().fadeIn(500);
 		}
 	</script>
+=======
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			font-size: 11pt;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		table, th, td{
+			border: 1px solid Black;
+			border-collapse: collapse;
+			opacity: 0.95;
+			margin: 10px;
+		}
+
+		th, td{
+			padding: 10px;
+			text-align: center;
+		}
+
+		th{
+			background-color: blue;
+			color: white;
+		}
+
+		tr:nth-child(even){
+			background-color: lightblue;
+		}
+
+		form{
+			margin: 10px;
+		}
+
+		select{
+			margin: 10px;
+		}
+
+		li{
+			margin: 10px;
+		}
+		
+
+		
+	</style>
+>>>>>>> 4986570e8e2f8c6faffa3b29af784602d4b6a990
 </head>
 <body>
 <div id="main-container">
