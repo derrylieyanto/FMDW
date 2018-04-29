@@ -13,8 +13,8 @@
 			$("#status").hide();
 		}
 		function Status(){
-			$("#status").hide();
-			$("#historis").hide().fadeIn(500);
+			$("#status").hide().fadeIn(500);
+			$("#historis").hide();
 		}
 	</script>
 	<style type="text/css">

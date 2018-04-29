@@ -12,7 +12,8 @@
 			margin: auto;
 		}
 		.row{
-    		margin: 0 auto;
+    		margin: auto;
+    		width: 960px;
 		}
 		.column{
 			float: right;
@@ -24,7 +25,7 @@
 		}
 		.film-list{
 			float: left;
-			width: 70%;
+			width: 75%;
 		}
 		.row:after{
 			content: "";
@@ -83,12 +84,22 @@
 			cursor: pointer;
 		}
 		#film_poster{
-			width: 225px;
-			height: 300px;
-			padding: 15px;
+			width: 170px;
+			height: 230px;
 		}
 		#sebatsbro{
 			text-align: center;
+		}
+		.film-list table{
+			border-collapse: separate;
+			border-spacing: 10px;
+		}
+		.film-list table td{
+			border: 2px solid white;
+		}
+		.film-list table td:hover{
+			background-color: #2196F3;
+			border-color: #2196F3;
 		}
 	</style>
 </head>
@@ -170,6 +181,7 @@
       			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
 			</form>
 			<!--show pictures with names on bottom-->
+
 			<table id="sebatsbro">
 				<tr>
 					<td>
