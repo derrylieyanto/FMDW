@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="stickymenu.js"></script>
 	<style type="text/css">
+		#main-container{
+			width: 1080px;
+			margin: auto;
+			 box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		}
 		.main-title{
 			text-align: center;
 			background-color: #1975bf;
@@ -35,7 +40,6 @@
 	</style>
 </head>
 <body>
-<div id="main-container">
 
 	<header>
 			
@@ -60,13 +64,13 @@
   			</div>
   		</div>
 	</header>
-
+	
 	<content>
 		<ul class="breadcrumb">
 		  <li><a href="home.php">Home</a></li>
 		  <li>Rent</li>
 		</ul>
-		</div>
+		<div id="main-container">
 		<div class="main-title">
 			<h1>RENT SYSTEM</h1>
 		</div>
@@ -80,7 +84,9 @@
 
 			</form>
 		</div>
+	</div>
 	</content>
+	</div>
 
 	<footer>
 		<div id="footer">
@@ -88,7 +94,7 @@
 			<p>Copyright 2018 FM DW. All Rights Reserved</p>
 		</div>
 	</footer>
-</div>
+
 
 </body>
 </html>
