@@ -20,7 +20,9 @@
 	</script>
 =======
 	<style type="text/css">
-		body{
+		#wrapper{
+			margin: auto;
+			width: 960px;
 			font-family: sans-serif;
 			font-size: 11pt;
 			background-size: cover;
@@ -58,7 +60,7 @@
 
 		li{
 			margin: 10px;
-		}
+		} 
 		
 
 		
@@ -99,7 +101,7 @@
 		  <li>Report</li>
 		</ul>
 		<h2>REPORT</h2>
-		<div>
+		<div id="wrapper">
 			<nav>
 				<ul>
 					<li onclick="Historis()">HISTORIS</li>
