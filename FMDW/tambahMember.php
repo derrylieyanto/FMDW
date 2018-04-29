@@ -6,6 +6,44 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	*{
+		font-family: sans-serif;
+	}
+		 input[type=submit]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover{
+    background-color: #45a049;
+    }
+
+    input[type=text]{
+      width: 55%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 20px;
+    }
+    label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+	 }
+
+     input[type=text]:focus{
+      background-color: lightblue;
+    }
+
+    .menjorok{
+    	padding: 15px;
+
+    }
+	</style>
 </head>
 <body>
 <div id="main-container">
@@ -40,6 +78,7 @@
 		  <li><a href="account.php">Account</a></li>
   		  <li>Tambah Member</li>
 		</ul>
+		<div class="menjorok">
 		<h4>First Name</h4>
 		<input type="text" name="FirstName" placeholder="Enter Your First Name">
 		<h4>Last Name</h4>
@@ -51,6 +90,7 @@
 		<h4>Phone Number</h4>
 		<input type="text" name="PhoneNumber" placeholder="Enter Your Phone Number"></br></br>
 		<input type="submit" name="submit" value="Tambah Member">
+	</div>
 	</content>
 
 	<footer>
