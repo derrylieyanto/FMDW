@@ -39,7 +39,7 @@
 		<ul class="breadcrumb">
 		  <li><a href="home.php">Home</a></li>
 		  <li><a href="account.php">Account</a></li>
-		  <li>Admin0</li>
+		  <li>ajc98</li>
 		</ul>
 		<div>
 			<h1>Detail Account</h1>
@@ -47,7 +47,7 @@
 			<h2>Username <i class="fas fa-edit"></i></h2>
 			<input type="text" name="account_username" value="ajc98">
 			<h2>Privilege <i class="fas fa-edit"></i></h2>
-			<input type="text" name="account_privilege" value="member">
+			<input type="text" name="account_privilege" value="MEMBER">
 			<h2>Last Online <i class="fas fa-edit"></i></h2>
 			<input type="date" name="account_last_online" value="2018-04-29">
 			<h2>Status <i class="fas fa-edit"></i></h2>

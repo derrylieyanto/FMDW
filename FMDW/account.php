@@ -136,9 +136,9 @@
 							<th>Jabatan</th>
 						</thead>
 						<tr>
-							<td onclick="location.href='account_detail.php'">1</td>
-							<td onclick="location.href='account_detail.php'">Admin0</td>
-							<td onclick="location.href='account_detail.php'">ADMIN</td>
+							<td>1</td>
+							<td >Admin0</td>
+							<td>ADMIN</td>
 							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr>
@@ -148,9 +148,9 @@
 							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr>
-							<td>3</td>
-							<td>Kasir2</td>
-							<td>KASIR</td>
+							<td onclick="location.href='account_detail.php'">3</td>
+							<td onclick="location.href='account_detail.php'">ajc98</td>
+							<td onclick="location.href='account_detail.php'">MEMBER</td>
 							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 					</table>
