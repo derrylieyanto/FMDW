@@ -97,7 +97,8 @@
 		<img src="images/FMDW.png" alt="logo FMDW" class="logo">
 		</div>
 		<div class="topnav">
-	 			<a href="home.php"><i class="fa fa-home"></a>
+	 			<a href="home.php" style="color: gray; font-size: 30px;padding: 6px 16px;
+"><i class="fa fa-home"></i></a>
 				<a href="film.php">Film</a>
 				<a class="active" href="member.php">Member</a>
 				<a href="rent.php">Rent</a>

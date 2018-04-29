@@ -54,7 +54,8 @@
 		<img src="images/FMDW.png" alt="logo FMDW" class="logo">
 		</div>
 		<div class="topnav">
-	 			<a href="#">Home</a>
+	 			<a href="home.php" style="color: gray; font-size: 30px;padding: 6px 16px;
+"><i class="fa fa-home"></i></a>
 				<a href="#">Film</a>
 				<a class="active" href="#">Member</a>
 				<a href="#">Rent</a>
