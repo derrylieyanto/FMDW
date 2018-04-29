@@ -44,7 +44,22 @@
 		}
 
 		li{
-			margin: 10px;
+			margin: 5px;
+			display: inline-block;
+			list-style: none;
+		}
+
+		nav ul li{
+			border: 1px solid black;
+			border-collapse: collapse;
+			opacity: 0.95;
+			padding: 5px;
+			background-color: blue;
+			color: white;
+		}
+
+		nav ul li:hover{
+			background-color: lightblue;
 		}
 		
 
@@ -85,14 +100,6 @@
 		  <li>Report</li>
 		</ul>
 		<h2>REPORT</h2>
-		<div>
-			<nav>
-				<ul>
-					<li>HISTORIS</li>
-					<li>STATUS DVD</li>
-				</ul>
-			</nav>
-			<div>
 				<select name="filter">
 					<option value="search_by_no">No</option>
 					<option value="search_by_idtransaksi">ID Transaksi</option>
@@ -111,6 +118,14 @@
       			</form>
       		</div>
 
+      		<div>
+			<nav>
+				<ul>
+					<li>HISTORIS</li>
+					<li>STATUS DVD</li>
+				</ul>
+			</nav>
+			<div>
 			<table id="historis">
 				<tr>
 					<th>No</th>
