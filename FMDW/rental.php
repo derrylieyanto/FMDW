@@ -6,6 +6,41 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+		font-family: sans-serif;
+	}
+		 input[type=submit]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover{
+    background-color: #45a049;
+    }
+
+    input[type=text]{
+      width: 55%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 20px;
+    }
+     input[type=text]:focus{
+      background-color: lightblue;
+    }
+
+    .form-container{
+    	padding: 10px;
+    }
+    print-button{
+    	float: right;
+    }
+	</style>
 </head>
 <body>
 <div id="main-container">

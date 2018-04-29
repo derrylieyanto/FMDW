@@ -78,6 +78,9 @@
 		nav ul li:hover{
 			background-color: lightblue;
 		}
+		print-button{
+    	float: right;
+    }
 >>>>>>> 484990b53762216408e094d71d83ea4108b22f99
 		
 
