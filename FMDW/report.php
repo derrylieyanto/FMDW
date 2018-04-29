@@ -63,7 +63,8 @@
 		}
 
 		table{
-			width: 100%;
+			width: 95%;
+			margin: auto;
 		}
 
 		table, th, td{
