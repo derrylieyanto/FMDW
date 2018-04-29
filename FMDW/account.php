@@ -136,9 +136,9 @@
 							<th>Jabatan</th>
 						</thead>
 						<tr>
-							<td>1</td>
-							<td>Admin0</td>
-							<td>ADMIN</td>
+							<td onclick="location.href='account_detail.php'">1</td>
+							<td onclick="location.href='account_detail.php'">Admin0</td>
+							<td onclick="location.href='account_detail.php'">ADMIN</td>
 							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr>
