@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Detail Member</title>
+	<title>Account detail</title>
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="main-container">
+	<div id="main-container">
 
 	<header>
 			
@@ -37,12 +37,12 @@
 	<content>
 		<ul class="breadcrumb">
 		  <li><a href="home.php">Home</a></li>
-		  <li><a href="member.php">Member</a></li>
-		  <li>Shigeo Tokuda</li>
+		  <li><a href="account.php">Account</a></li>
+		  <li>Admin0</li>
 		</ul>
 		<div>
-			<h1>Detail Member</h1>
-			<h3>ID Member : 180001</h3>
+			<h1>Detail Account</h1>
+			<h3>Username : Admin0</h3>
 			<h2>Nama <i class="fas fa-edit"></i></h2>
 			<input type="text" name="member_nama" value="Shigeo Tokuda">
 			<h2>Username <i class="fas fa-edit"></i></h2>
