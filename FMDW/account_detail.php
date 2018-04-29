@@ -43,23 +43,17 @@
 		</ul>
 		<div>
 			<h1>Detail Account</h1>
-			<h3>Username : Admin0</h3>
-			<h2>Nama <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_nama" value="Shigeo Tokuda">
+			<h3>Username : ajc98</h3>
 			<h2>Username <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_username" value="shigeo69">
-			<h2>Password <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_password" value="shigeotokuda123">
-			<h2>Email <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_email" value="shigeotokuda@jav.com">
-			<h2>Alamat <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_alamat" value="Jl. Kakek Legend no 69">
-			<h2>Tanggal Lahir <i class="fas fa-edit"></i></h2>
-			<input type="date" name="member_birthday" value="1934-08-18">
+			<input type="text" name="account_username" value="ajc98">
+			<h2>Privilege <i class="fas fa-edit"></i></h2>
+			<input type="text" name="account_privilege" value="member">
+			<h2>Last Online <i class="fas fa-edit"></i></h2>
+			<input type="date" name="account_last_online" value="2018-04-29">
 			<h2>Status <i class="fas fa-edit"></i></h2>
 			<form>
-				<input type="radio" name="status_member" value="aktif" checked="checked">Aktif <br/>
-				<input type="radio" name="status_member" value="tidakaktif">Tidak Aktif
+				<input type="radio" name="account_status" value="Active">Active <br/>
+				<input type="radio" name="account_status" value="Banned" checked="checked">Banned
 			</form>
 			<p></p>
 			<input type="submit" name="submit" value="Save">
