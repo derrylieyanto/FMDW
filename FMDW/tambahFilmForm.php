@@ -56,9 +56,6 @@
     display: inline-block;
 }
 
-    content{
-
-    }
 
 
   </style>
