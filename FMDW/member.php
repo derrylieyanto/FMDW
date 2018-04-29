@@ -50,12 +50,6 @@
 			border-bottom: 5px solid #eee;
 			margin-bottom: 10px;
 		}
-		.members table:nth-of-type(odd){
-			
-		}
-		.members table:nth-of-type(even){
-			
-		}
 		.members table, th, td{
 			width: 100%;
 			border-collapse: collapse;
@@ -65,14 +59,25 @@
 			padding-right: 350px;
 			padding-left: 10px;
 			text-align: left;
+			font-weight: normal;
 		}
+		.members th.nama-member{
+			font-weight: bold;
+			color: #1975bf;
+			font-size: 24px;
+		}
+		.members th.email-member{
+			vertical-align: top;
+		}
+
 		.members td{
 			padding: 0px 25px;
 		}
 		.members img{
 			width: 180px;
 			height: 180px;
-			border: 2px solid #eee;
+			border: 2px solid #1975bf;
+			border-radius: 90px;
 		}
 		.members button{
 			color: white;
@@ -131,52 +136,52 @@
 
 			<table class="member1">
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
+					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
 					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
 					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 				</tr>
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
+					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
 				</tr>
 			</table>
 			<table class="member2">
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
+					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
 					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
 					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 				</tr>
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
+					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
 				</tr>
 			</table>
 			<table class="member3">
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
+					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
 					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
 					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 				</tr>
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
+					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
 				</tr>
 			</table>
 			<table class="member4">
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
+					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
 					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
 					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 				</tr>
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
+					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
 				</tr>
 			</table>
 			<table class="member5">
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
+					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
 					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
 					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 				</tr>
 				<tr>
-					<th  onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
+					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
 				</tr>
 			</table>
 		</div>
