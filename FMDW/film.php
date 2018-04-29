@@ -83,8 +83,8 @@
 			cursor: pointer;
 		}
 		#film_poster{
-			width: 300px;
-			height: 450px;
+			width: 225px;
+			height: 300px;
 			padding: 15px;
 		}
 		#sebatsbro{
@@ -192,8 +192,9 @@
 				</tr>
 				<tr>
 					<td>
-			          <img id="film_poster" src="images/film5.jpg">
-			          <br/>Black Panther
+						<a href="detailFilm.php"><img id="film_poster" src="images/film5.jpg">
+			          <br/>Black Panther</a>
+			          
 			        </td>
 
 			        <td>
