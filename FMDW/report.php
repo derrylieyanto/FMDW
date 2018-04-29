@@ -6,6 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/jquery-3.3.1.min"></script>
+	<script type="text/javascript">
+		function Historis(){
+			$("#historis").hide().fadeIn(500);
+			$("#status").hide();
+		}
+		function Status(){
+			$("#status").hide();
+			$("#historis").hide().fadeIn(500);
+		}
+	</script>
 </head>
 <body>
 <div id="main-container">
@@ -44,8 +55,8 @@
 		<div>
 			<nav>
 				<ul>
-					<li>HISTORIS</li>
-					<li>STATUS DVD</li>
+					<li onclick="Historis()">HISTORIS</li>
+					<li onclick="Status()">STATUS DVD</li>
 				</ul>
 			</nav>
 			<div>
@@ -66,8 +77,8 @@
       				<button type="submit"><i class="fa fa-search"></i></button>
       			</form>
       		</div>
-
-			<table id="historis">
+      		<div id="historis">
+			<table>
 				<tr>
 					<th>No</th>
 					<th>ID Transaksi</th>
@@ -165,8 +176,10 @@
 					<td>Rp50,000.00</td>
 				</tr>
 			</table>
+			</div>
 
-			<table id="status">
+			<div id="status">
+			<table>
 				<tr>
 					<th>No</th>
 					<th>Nama Barang</th>
@@ -216,6 +229,7 @@
 					<td>Tidak Tersedia</td>
 				</tr>
 			</table>
+		</div>
 		</div>
 	</content>
 
