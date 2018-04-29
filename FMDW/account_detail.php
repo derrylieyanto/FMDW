@@ -42,17 +42,17 @@
 		</ul>
 		<div>
 			<h1>Detail Account</h1>
-			<h3>Username : Admin0</h3>
+			<h3>Username : ajc98</h3>
 			<h2>Username <i class="fas fa-edit"></i></h2>
-			<input type="text" name="account_username" value="Admin0">
+			<input type="text" name="account_username" value="ajc98">
 			<h2>Privilege <i class="fas fa-edit"></i></h2>
-			<input type="text" name="account_privilege" value="admin">
+			<input type="text" name="account_privilege" value="member">
 			<h2>Last Online <i class="fas fa-edit"></i></h2>
 			<input type="date" name="account_last_online" value="2018-04-29">
 			<h2>Status <i class="fas fa-edit"></i></h2>
 			<form>
-				<input type="radio" name="account_status" value="Active" checked="checked">Active <br/>
-				<input type="radio" name="account_status" value="Banned">Banned
+				<input type="radio" name="account_status" value="Active">Active <br/>
+				<input type="radio" name="account_status" value="Banned" checked="checked">Banned
 			</form>
 			<p></p>
 			<input type="submit" name="submit" value="Save">
