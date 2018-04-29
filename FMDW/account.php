@@ -6,6 +6,80 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		#wrapper{
+			 margin: auto;
+			 width: 960px;
+			 box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		}
+		.title{
+			margin: auto;
+			padding: 20px 10px;	
+			background-color: #1975bf;
+		}
+		.title h1{
+			margin-left: 10px;
+			font-size: 36px;
+			color: white;
+		}
+		.inline{
+			display: inline-block;
+		}
+		.title select, input[type=text], button{
+			font-size: 24px;
+		}
+		.title select{
+			margin-left: 75px;
+			color: gray;
+		}
+		.title input[type=text]{
+			margin-left: 10px;
+		}
+		button.detail, button.remove{
+			font-size: 18px;
+		}
+		.title button#add{
+			margin-left: 5px;
+			color: white;
+			background-color: #00FF00;
+			border-color: #00FF00;
+			border-radius: 5px;
+		}
+		.title button#add:hover{
+			background-color: green;
+			border-color: #00FF00;
+		}
+		.account{
+			margin: auto;
+			width: 100%;
+		}
+		.account table{
+			width: 98%;
+			border-collapse: collapse;
+			margin: 10px;
+		}
+		.account table th{
+			padding: 15px 0px;
+			text-align: left;
+		}
+		.account table td{
+			padding: 5px 0px;
+			border-top: 3px solid #ddd;
+		}
+		.account tr:hover{
+			background-color: #eee;
+		}
+		.account button{
+			color: white;
+			background-color: red;
+			border-color: red;
+			font-size: 24px;
+			border-radius: 5px;
+		}
+		.account button:hover{
+			background-color: #ff3333;
+		}
+	</style>
 </head>
 <body>
 <div id="main-container">
@@ -39,51 +113,48 @@
 		  <li><a href="home.php">Home</a></li>	
 		  <li>Account</li>
 		</ul>
-			<div>
-				<h1>Account List</h1>
-				<form>
-					<select name="filter">
-					  <option value="filter_by_uname">Filter by Username</option>
-					  <option value="filter_by_no">Filter by number</option>
-					  <option value="filter_by_jabatan">Filter by Jabatan</option>
-					</select>
-					<!--JAVASCRIPT-->
-					<input type="button" name="detail" value="Detail" onclick="">
-					<input type="button" name="edit" value="Edit" onclick="">
-					<!--hapus-->
-					<img src="">
+			<div id="wrapper">
+				<div class="title">
+					<h1 class="inline">Account List</h1>
+					<form class="inline">
+						<select name="filter">
+						  <option value="filter_by_uname">Filter by Username</option>
+						  <option value="filter_by_no">Filter by number</option>
+						  <option value="filter_by_jabatan">Filter by Jabatan</option>
+						</select>
+						<input type="text" placeholder="Search.." name="search">
+		      			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
+					</form>
 					<!--tambah-->
-					<img src="">
-					<input type="text" placeholder="Search.." name="search">
-	      			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
-				</form>
+					<button type="submit" id="add" onclick="location.href='tambahMember.php'"><i class="fa fa-plus"></i></button></li>
+				</div>
+				<div class="account">
 					<table>
-						<tr>
+						<thead>
 							<th>No</th>
 							<th>Username</th>
 							<th>Jabatan</th>
-						</tr>
+						</thead>
 						<tr>
 							<td>1</td>
 							<td>Admin0</td>
 							<td>ADMIN</td>
+							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr>
 							<td>2</td>
-							<td>Admin1</td>
-							<td>ADMIN</td>
+							<td>Kasir1</td>
+							<td>KASIR</td>
+							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr>
 							<td>3</td>
-							<td>Admin2</td>
-							<td>ADMIN</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>ajc98</td>
-							<td>member</td>
+							<td>Kasir2</td>
+							<td>KASIR</td>
+							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 					</table>
+				</div>	
 			</div>
 	</content>
 	<footer>
