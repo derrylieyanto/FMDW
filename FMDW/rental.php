@@ -37,6 +37,9 @@
     .form-container{
     	padding: 10px;
     }
+    print-button{
+    	float: right;
+    }
 	</style>
 </head>
 <body>
