@@ -6,6 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.menjorok{
+		padding: 15px;
+		margin: auto;
+    	width: 960px;
+    	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	}
+	</style>
 </head>
 <body>
 	<div id="main-container">
@@ -41,7 +49,7 @@
 		  <li><a href="account.php">Account</a></li>
 		  <li>ajc98</li>
 		</ul>
-		<div>
+		<div class="menjorok">
 			<h1>Detail Account</h1>
 			<h3>Username : ajc98</h3>
 			<h2>Username <i class="fas fa-edit"></i></h2>
