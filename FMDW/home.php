@@ -42,6 +42,7 @@
 <body>
 
 	<header>
+
 			
 		<div class="logo-container">	
 		<img src="images/FMDW.png" alt="logo FMDW" class="logo">
@@ -63,7 +64,6 @@
       				<a class="logout" href="#">LOG OUT</a>
     			</form>
   			</div>
-  		</div>
 	</header>
 	
 	<content>
