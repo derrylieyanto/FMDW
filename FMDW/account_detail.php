@@ -15,6 +15,9 @@
     	width: 960px;
     	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 	}
+	.menjorok input{
+		border-style: none;
+	}
 		 input[type=submit]{
     background-color: #4CAF50;
     border: none;
