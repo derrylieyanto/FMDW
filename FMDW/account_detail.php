@@ -62,9 +62,9 @@
 	 			<a href="home.php" style="color: gray; font-size: 30px;padding: 6px 16px;
 "><i class="fa fa-home"></i></a>
 				<a href="film.php">Film</a>
-				<a class="active" href="member.php">Member</a>
+				<a  href="member.php">Member</a>
 				<a href="rent.php">Rent</a>
-				<a href="account.php">Account</a>
+				<a class="active" href="account.php">Account</a>
 				<a href="report.php">Report</a>
 	  		
   			<div class="search-container">
