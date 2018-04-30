@@ -6,6 +6,14 @@
   <link rel="stylesheet" type="text/css" href="style/footer.css">
   <link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    .menjorok{
+      padding: 15px;
+    margin: auto;
+      width: 960px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  </style>
 </head>
 <body>
 <div id="main-container">
@@ -41,7 +49,7 @@
     <li><a href="film.php">Film</a></li>
     <li>Black Panther</li>
   </ul>
-
+<div class="menjorok">
 	<table style="width:100%">
   <tr>
     <td><h1>Detail Film</h1></td> 
@@ -58,6 +66,7 @@
   	<p>After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king. When a powerful enemy suddenly reappears, T'Challa's mettle as king -- and as Black Panther -- gets tested when he's drawn into a conflict that puts the fate of Wakanda and the entire world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people.</p>
   	<p><h2>Tanggal Rilis</h2></p>
   	29-jan-2018
+</div>
 </content>
 
 <footer>
