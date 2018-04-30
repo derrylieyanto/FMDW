@@ -203,9 +203,9 @@
 			        </td>
 				</tr>
 				<tr>
-					<td>
-						<a href="detailFilm.php"><img id="film_poster" src="images/film5.jpg">
-			          <br/>Black Panther</a>
+					<td onclick="location.href='detailFilm.php'">
+					<img id="film_poster" src="images/film5.jpg">
+			          <br/>Black Panther
 			          
 			        </td>
 
