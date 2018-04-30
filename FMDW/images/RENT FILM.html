@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost/FMDW/FMDW/rental.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>RENT FILM</title>
+	<link rel="stylesheet" type="text/css" href="./RENT FILM_files/header.css">
+	<link rel="stylesheet" type="text/css" href="./RENT FILM_files/footer.css">
+	<link rel="stylesheet" type="text/css" href="./RENT FILM_files/breadcrumb.css">
+	<link rel="stylesheet" type="text/css" href="./RENT FILM_files/form.css">
+	<link rel="stylesheet" href="./RENT FILM_files/font-awesome.min.css">
+	
+</head>
+<body>
+<div id="main-container">
+
+	<header>
+			
+		<div class="logo-container">	
+		<img src="./RENT FILM_files/FMDW.png" alt="logo FMDW" class="logo">
+		</div>
+		<div class="topnav">
+	 			<a href="http://localhost/FMDW/FMDW/home.php" style="color: gray; font-size: 30px;padding: 6px 16px;
+"><i class="fa fa-home"></i></a>
+				<a href="http://localhost/FMDW/FMDW/film.php">Film</a>
+				<a href="http://localhost/FMDW/FMDW/member.php">Member</a>
+				<a class="active" href="http://localhost/FMDW/FMDW/rent.php">Rent</a>
+				<a href="http://localhost/FMDW/FMDW/account.php">Account</a>
+				<a href="http://localhost/FMDW/FMDW/report.php">Report</a>
+	  		
+  			<div class="search-container">
+    			<form action="http://localhost/action_page.php">
+      				<input type="text" placeholder="Search.." name="search">
+      				<button type="submit"><i class="fa fa-search"></i></button>
+      				<label>Hello. </label>
+      				<a class="logout" href="http://localhost/FMDW/FMDW/rental.php#">LOG OUT</a>
+    			</form>
+  			</div>
+  		</div>
+	</header>
+
+	<content>
+		<ul class="breadcrumb">
+		  <li><a href="http://localhost/FMDW/FMDW/home.php">Home</a></li>
+		  <li><a href="http://localhost/FMDW/FMDW/rent.php">Rent</a></li>
+		  <li>Rental</li>
+		</ul>
+		<div class="form-container">
+			<form action="http://localhost/action_page.php">
+				<label class="form-title"><h1>Rent</h1></label><br><br>
+				<label>Judul Film</label><br>
+				<input type="text" name="judulfilm"><br><br>
+				<label>ID Member</label><br>
+				<input type="text" name="idmember"><br><br>
+				<label>Tanggal Pinjam</label><br>
+				<input type="date" name="tanggalpinjam"><br><br>
+				<label>Durasi Peminjaman</label><br>
+				<input type="number" name="durasipeminjaman"><br><br>
+				<label>Metode Pembayaran</label><br>
+				<input type="radio" name="gender" value="Cash" checked=""> Cash<br>
+  				<input type="radio" name="gender" value="Transfer"> Transfer<br><br>
+  				<input type="submit" value="Submit"><br>
+  				<a class="print-button" href="http://localhost/FMDW/FMDW/rental.php#">PRINT</a><br>
+			</form>
+		</div>
+	</content>
+
+	<footer>
+		<div id="footer">
+		<hr>
+		<p>Copyright 2018 FM DW. All Rights Reserved</p>
+	</div>
+	</footer>
+</div>
+
+</body></html>

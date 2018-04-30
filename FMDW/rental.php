@@ -5,47 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
+	<link rel="stylesheet" type="text/css" href="style/form.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style type="text/css">
-		*{
-		font-family: sans-serif;
-	}
-	.form-container{
-		margin: auto;
-    	width: 960px;
-    	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-	}
-		 input[type=submit]{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    }
-
-    input[type=submit]:hover{
-    background-color: #45a049;
-    }
-
-    input[type=text]{
-      width: 55%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      font-size: 20px;
-    }
-     input[type=text]:focus{
-      background-color: lightblue;
-    }
-
-    .form-container{
-    	padding: 10px;
-    }
-    print-button{
-    	float: right;
-    }
-	</style>
+	
 </head>
 <body>
 <div id="main-container">
@@ -82,8 +44,10 @@
 		  <li>Rental</li>
 		</ul>
 		<div class="form-container">
-			<form action="/action_page.php">
-				<label class="form-title">Rent</label><br><br>
+			<div class="form-title">
+				<h1>Rent</h1>
+			</div>
+			<form action="/action_page.php" class="form">
 				<label>Judul Film</label><br>
 				<input type="text" name="judulfilm"><br><br>
 				<label>ID Member</label><br>
@@ -96,8 +60,8 @@
 				<input type="radio" name="gender" value="Cash" checked> Cash<br>
   				<input type="radio" name="gender" value="Transfer"> Transfer<br><br>
   				<input type="submit" value="Submit"><br>
-  				<a class="print-button" href="#">PRINT</a><br>
 			</form>
+			<button type="button">PRINT</button>
 		</div>
 	</content>
 

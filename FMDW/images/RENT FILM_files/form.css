@@ -7,14 +7,9 @@
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   
     }
-  .form-title{
+  .fom-title{
     background-color: #1975bf;
   }
-  .form-title h1{
-    color: white;
-    padding: 15px;
-  }
-
 input[type="submit"] {
   position: relative;
   padding: 4px 12px;
@@ -242,16 +237,11 @@ input[type="color"],
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.form label{
-  font-size: 18px;
-  margin-left: 35px;
+input,
+textarea {
+  width: 210px;
 }
-.form input,
-.form textarea {
-  width: 90%;
-  margin-left: 35px;
-}
-.form textarea {
+textarea {
   padding-right: 4px;
 }
 textarea,
