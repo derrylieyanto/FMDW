@@ -130,7 +130,7 @@
 			      		<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
 			      	</form>
 			    </li>
-			    <li><button type="submit" id="add" onclick="location.href='tambahMember.php'"><i class="fa fa-plus"></i></button></li>
+			    <li><button type="submit" id="add" onclick="location.href='tambahAccount.php'"><i class="fa fa-plus"></i></button></li>
 				</ul>
 		</div>
 		<div class="members">
