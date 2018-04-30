@@ -10,6 +10,11 @@
 	*{
 		font-family: sans-serif;
 	}
+	.menjorok{
+		margin: auto;
+    	width: 960px;
+    	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	}
 		 input[type=submit]{
     background-color: #4CAF50;
     border: none;
@@ -77,7 +82,7 @@
 		<ul class="breadcrumb">
 		  <li><a href="home.php">Home</a></li>
 		  <li><a href="account.php">Account</a></li>
-  		  <li>Tambah Member</li>
+  		  <li>Tambah Account</li>
 		</ul>
 		<div class="menjorok">
 		<h4>Full Name</h4>
