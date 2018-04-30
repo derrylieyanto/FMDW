@@ -10,6 +10,12 @@
     h1,h3{
       text-align: center;
     }
+    .form-container{
+      padding: 15px;
+    margin: auto;
+      width: 960px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
     *{
       box-sizing: border-box;
     }
@@ -96,6 +102,7 @@
     </ul>
 		<h1>Penambahan Film</h1>
 		<h3>Isi data-data berikut untuk menambah film</h3>
+    <div class="form-container"
 		<form action="/action_page.php">
   			<p><h2>Judul Film</h2></p> <input type="text" name="judulFilm" placeholder="Masukkan judul Film"><br>
   			<p><h2>Tanggal Rilis</h2></p><input type="date" name="date"><br>
@@ -119,6 +126,7 @@
 			<p></p>
 			<input type="submit" name="submit" value="Submit">
 		</form>
+    </div>
 	</content>
 
 	<footer>
