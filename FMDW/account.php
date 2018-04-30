@@ -126,7 +126,7 @@
 		      			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
 					</form>
 					<!--tambah-->
-					<button type="submit" id="add" onclick="location.href='tambahMember.php'"><i class="fa fa-plus"></i></button></li>
+					<button type="submit" id="add" onclick="location.href='tambahAccount.php'"><i class="fa fa-plus"></i></button></li>
 				</div>
 				<div class="account">
 					<table>
