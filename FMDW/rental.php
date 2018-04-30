@@ -59,9 +59,12 @@
 				<label>Metode Pembayaran</label><br>
 				<input type="radio" name="gender" value="Cash" checked> Cash<br>
   				<input type="radio" name="gender" value="Transfer"> Transfer<br><br>
-  				<input type="submit" value="Submit"><br>
+  				<input class="submit" type="submit" value="Submit"><br>
 			</form>
-			<button type="button">PRINT</button>
+			<br>
+			<br>
+			<p><i class="fa fa-print"></i>  Press CTRL+P to print struct</p>
+			<br>
 		</div>
 	</content>
 

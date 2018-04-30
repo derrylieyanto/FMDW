@@ -60,8 +60,11 @@
 				<input type="radio" name="gender" value="Cash" checked> Cash<br>
   				<input type="radio" name="gender" value="Transfer"> Transfer<br><br>
   				<input type="submit" value="Submit"><br>
-  				<a class="print-button" href="#">PRINT</a><br>
 			</form>
+			<br>
+			<br>
+			<p><i class="fa fa-print"></i>  Press CTRL+P to print struct</p>
+			<br>
 		</div>
 	</content>
 

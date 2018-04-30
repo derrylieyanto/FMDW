@@ -251,6 +251,11 @@ input[type="color"],
   width: 90%;
   margin-left: 35px;
 }
+.form input[type=submit]{
+  margin-left: 250px;
+  height: 50px;
+  width: 50%;
+}
 .form textarea {
   padding-right: 4px;
 }

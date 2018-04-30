@@ -34,6 +34,7 @@
 			margin-left: 10px;
 			font-size: 36px;
 			color: white;
+			padding: 15px;
 		}
 		.title button{
 			width: 100px;

@@ -64,8 +64,11 @@
 				<label>Total Biaya</label><br>
 				<input type="number" min="0" step="any" name="totalharga"><br><br>
   				<input type="submit" value="Submit"><br>
-  				<a class="print-button" href="#">PRINT</a><br>
 			</form>
+			<br>
+			<br>
+			<p><i class="fa fa-print"></i>  Press CTRL+P to print struct</p>
+			<br>
 		</div>
 	</content>
 
