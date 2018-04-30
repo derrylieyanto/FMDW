@@ -191,7 +191,7 @@
 
 			        <td>
 			          <img id="film_poster" src="images/film2.jpg">
-			          <br/>Bokep Jepang
+			          <br/>Kenangan di Perpus
 			        </td>
 
 			        <td><img id="film_poster" src="images/film3.jpg">
