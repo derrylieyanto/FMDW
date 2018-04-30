@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TAMBAH MEMBER</title>
+	<title>TAMBAH ACCOUNT</title>
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
@@ -57,9 +57,9 @@
 	 			<a href="home.php" style="color: gray; font-size: 30px;padding: 6px 16px;
 "><i class="fa fa-home"></i></a>
 				<a href="#">Film</a>
-				<a class="active" href="#">Member</a>
+				<a href="#">Member</a>
 				<a href="#">Rent</a>
-				<a href="#">Account</a>
+				<a class="active" href="#">Account</a>
 				<a href="#">Report</a>
 	  		
   			<div class="search-container">
@@ -76,21 +76,21 @@
 	<content>
 		<ul class="breadcrumb">
 		  <li><a href="home.php">Home</a></li>
-		  <li><a href="member.php">Member</a></li>
+		  <li><a href="account.php">Account</a></li>
   		  <li>Tambah Member</li>
 		</ul>
 		<div class="menjorok">
-		<h4>First Name</h4>
-		<input type="text" name="FirstName" placeholder="Enter Your First Name">
-		<h4>Last Name</h4>
-		<input type="text" name="LastName" placeholder="Enter Your Last Name">
-		<h4>Address</h4>
-		<input type="text" name="Address" placeholder="Enter Your Address">
-		<h4>Birth Date</h4>
-		<input type="Date" name="BirthDate">
+		<h4>Full Name</h4>
+		<input type="text" name="FullName" placeholder="Enter Your Full Name">
+		<h4>Username</h4>
+		<input type="text" name="Username" placeholder="Enter Your Username">
+		<h4>Department</h4>
+		<input type="text" name="Department" placeholder="Enter Your Department">
+		<h4>EMail</h4>
+		<input type="text" name="Email" placeholder="Enter Your Email Address">
 		<h4>Phone Number</h4>
 		<input type="text" name="PhoneNumber" placeholder="Enter Your Phone Number"></br></br>
-		<input type="submit" name="submit" value="Tambah Member">
+		<input type="submit" name="submit" value="Tambah Account">
 	</div>
 	</content>
 
