@@ -7,21 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
-<<<<<<< HEAD
-		.menjorok{
-		padding: 15px;
-=======
-	*{
+		*{
 		font-family: sans-serif;
 	}
 	.menjorok{
->>>>>>> e2dce288240ccbb2c15d38b7708555185401f2a2
 		margin: auto;
     	width: 960px;
     	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 	}
-<<<<<<< HEAD
-=======
 		 input[type=submit]{
     background-color: #4CAF50;
     border: none;
@@ -55,7 +48,6 @@
     	padding: 15px;
 
     }
->>>>>>> e2dce288240ccbb2c15d38b7708555185401f2a2
 	</style>
 </head>
 <body>
