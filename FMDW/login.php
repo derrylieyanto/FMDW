@@ -94,7 +94,7 @@
 					</div>
 	    			<input type="text" placeholder="Enter Username" name="uname" required>
 	    			<input type="password" placeholder="Enter Password" name="psw" required>
-	    			<input type="submit" name="submit" value="LOGIN">
+	    			<input type="submit" name="submit" value="LOGIN" onclick="location.href='return.php'">
 			</form>
   		</div>
 
