@@ -35,6 +35,11 @@
 			font-size: 36px;
 			color: white;
 		}
+		.title button{
+			width: 100px;
+			height: 50px;
+			background-color: white;
+		}
 		.inline{
 			display: inline-block;
 		}
