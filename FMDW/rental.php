@@ -10,6 +10,11 @@
 		*{
 		font-family: sans-serif;
 	}
+	.form-container{
+		margin: auto;
+    	width: 960px;
+    	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	}
 		 input[type=submit]{
     background-color: #4CAF50;
     border: none;
@@ -72,8 +77,8 @@
 
 	<content>
 		<ul class="breadcrumb">
-		  <li><a href="#">Home</a></li>
-		  <li><a href="#">Rent</a></li>
+		  <li><a href="home.php">Home</a></li>
+		  <li><a href="rent.php">Rent</a></li>
 		  <li>Rental</li>
 		</ul>
 		<div class="form-container">
