@@ -1,3 +1,29 @@
+<?php
+	session_start();
+	include 'connect.php';
+	if (isset($_POST['login'])) {
+		$_SESSION['username'] = $_POST['username'];
+		$_SESSION['pass1'] = $_POST['pass1'];
+
+		$user = $_POST['username'];
+		$pass = $_POST['pass1'];
+
+		$sql = "SELECT username,password FROM user1";
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+		    // output data of each row
+		    while($row = mysqli_fetch_assoc($result)) {
+		    	if ($row["username"]==$user AND $row["password"]==$pass) {
+		    		header("location:home.php");
+		    	}
+		    }
+		}
+
+		mysqli_close($conn);
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
