@@ -1,3 +1,29 @@
+<?php
+	session_start();
+	include 'connect.php';
+	if(isset($_POST['submit'])){
+
+		$nama = $_POST['nama'];
+		$password = $_POST['password'];
+		$email = $_POST['email'];
+		$alamat = $_POST['alamat'];
+		$tanggal_lahir = $_POST['tanggal_lahir'];
+		$status = $_POST['status'];
+		$foto_member = $_POST['foto_member'];
+
+		$sql = "INSERT INTO member (nama, password, email, alamat, tanggal_lahir, status, foto_member) VALUES ('$nama','$password','$email','$alamat','$tanggal_lahir','$status','$foto_member')";
+
+				if (mysqli_query($conn, $sql)) {
+				    echo "New record created successfully";
+				} else {
+				    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+				}
+			
+
+			mysqli_close($conn);
+}
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,19 +110,20 @@
 		  <li><a href="member.php">Member</a></li>
   		  <li>Tambah Member</li>
 		</ul>
+
 		<div class="menjorok">
-		<h4>First Name</h4>
-		<input type="text" name="FirstName" placeholder="Enter Your First Name">
-		<h4>Last Name</h4>
-		<input type="text" name="LastName" placeholder="Enter Your Last Name">
-		<h4>Address</h4>
-		<input type="text" name="Address" placeholder="Enter Your Address">
-		<h4>Birth Date</h4>
-		<input type="Date" name="BirthDate">
-		<h4>Phone Number</h4>
-		<input type="text" name="PhoneNumber" placeholder="Enter Your Phone Number"></br></br>
-		<input type="submit" name="submit" value="Tambah Member">
-	</div>
+		<form action="tambahMember.php" method="post" enctype="multipart/form-data">
+		<input type="text" id="nama" required="" name="nama" placeholder="Nama Lengkap"/>
+		<input type="password" id="password" name="password" placeholder="Password" required=""/>
+		<input type="text" id="email" name="email" placeholder="Email" required=""/>
+		<input type="text" id="alamat" name="alamat" placeholder="Alamat" required=""/>
+		<input type="date" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" required=""/>
+		<input type="text" id="status" name="status" placeholder="Pekerjaan" required=""/>
+		<label>Foto profil</label>
+		<input type="file" name="foto_member" id="foto_member" placeholder="Foto Profil" required=""/>
+		<input type="submit" name="submit" value="submit"/>
+		</div>
+		</form>
 	</content>
 
 	<footer>
