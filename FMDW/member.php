@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	include 'connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -151,8 +157,6 @@
 		</div>
 		<div class="members">
 			<?php
-		 		session_start();
-				include 'connect.php';
 		 		$sql = "SELECT * FROM member";
 				$result = mysqli_query($conn, $sql);
 				$i = 1;
@@ -164,12 +168,12 @@
 				    while($row = mysqli_fetch_array($result)) {
 				    	echo "<table>
 								<tr>
-									<th class=\"nama-member\" onclick=\"location.href='detailMember.php'\">Nama  :". $row['nama'] ."</th>
-									<td rowspan=\"2\"  onclick=\"location.href='detailMember.php'\"><img src=\"images/". $row['foto_member'] ."\"></td>
+									<th class=\"nama-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Nama  :". $row['nama'] ."</th>
+									<td rowspan=\"2\"  onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\"><img src=\"images/". $row['foto_member'] ."\"></td>
 									<td rowspan=\"2\"><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
 								</tr>
 								<tr>
-									<th class=\"email-member\" onclick=\"location.href='detailMember.php'\">Email : ". $row['email'] ."</th>
+									<th class=\"email-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Email : ". $row['email'] ."</th>
 								</tr>
 							</table>";
 				    }
