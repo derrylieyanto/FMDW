@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  include 'connect.php';
+  $id_member = $_GET['id_member'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +30,7 @@
 		<img src="images/FMDW.png" alt="logo FMDW" class="logo">
 		</div>
 		<div class="topnav">
-	 			<a href="home.php" style="color: gray; font-size: 30px;padding: 6px 16px;
-"><i class="fa fa-home"></i></a>
+	 			<a href="home.php" style="color: gray; font-size: 30px;padding: 6px 16px;"><i class="fa fa-home"></i></a>
 				<a href="film.php">Film</a>
 				<a class="active" href="member.php">Member</a>
 				<a href="rent.php">Rent</a>
@@ -47,32 +52,38 @@
 		<ul class="breadcrumb">
 		  <li><a href="home.php">Home</a></li>
 		  <li><a href="member.php">Member</a></li>
-		  <li>Shigeo Tokuda</li>
+		  <li>
+		      <?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['nama']; 
+		     ?>
+		   </li>
 		</ul>
 		<div class="menjorok">
 			<h1>Detail Member</h1>
-			<h3>ID Member : 180001</h3>
+			<?php echo '<img class="poster" src="images/'. $row['foto_member'] .'">'; ?>
+			<h3>ID Member : <?php echo $row['id_member']; ?></h3>
 			<h2>Nama <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_nama" value="Shigeo Tokuda">
+			<?php echo $row['nama']; ?>
 			<h2>Username <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_username" value="shigeo69">
+			<?php echo $row['username']; ?>
 			<h2>Password <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_password" value="shigeotokuda123">
+			<?php echo $row['password']; ?>
 			<h2>Email <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_email" value="shigeotokuda@jav.com">
+			<?php echo $row['email']; ?>
 			<h2>Alamat <i class="fas fa-edit"></i></h2>
-			<input type="text" name="member_alamat" value="Jl. Kakek Legend no 69">
+			<?php echo $row['alamat']; ?>
 			<h2>Tanggal Lahir <i class="fas fa-edit"></i></h2>
-			<input type="date" name="member_birthday" value="1934-08-18">
+			<?php echo $row['tanggal_lahir']; ?>
 			<h2>Status <i class="fas fa-edit"></i></h2>
-			<form>
-				<input type="radio" name="status_member" value="aktif" checked="checked">Aktif <br/>
-				<input type="radio" name="status_member" value="tidakaktif">Tidak Aktif
-			</form>
+			<?php echo $row['status']; ?>
 			<p></p>
 			<input type="submit" name="submit" value="Save">
 		</div>
-
 	</content>
 
 	<footer>
