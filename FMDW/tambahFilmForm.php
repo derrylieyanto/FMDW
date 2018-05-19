@@ -1,70 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Penambahan Film</title>
+  <title>Penambahan Film</title>
   <link rel="stylesheet" type="text/css" href="style/header.css">
   <link rel="stylesheet" type="text/css" href="style/footer.css">
   <link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
+  <link rel="stylesheet" type="text/css" href="style/form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style type="text/css">
-    h1,h3{
-      text-align: center;
+    img.preview{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      min-height: 300px;
     }
-    .form-container{
-      padding: 15px;
-    margin: auto;
-      width: 960px;
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  }
-    *{
-      box-sizing: border-box;
-    }
-
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-
-    }
-
-    form{
-      padding: 15px;
-    }
-    input[type=checkbox]{
-      margin: 10px;
-    }
-
-    input[type=submit]{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    }
-
-    input[type=submit]:hover{
-    background-color: #45a049;
-    }
-
-    input[type=text]{
-      width: 55%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      font-size: 20px;
-    }
-
-    input[type=text]:focus{
-      background-color: lightblue;
-    }
-
-    label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-}
-
-
-
+  
   </style>
+  <script type="text/javascript">
+      eval(function(p,a,c,k,e,d){
+        while(c--){
+          if(k[c]){
+            p=p.replace(new RegExp('\\b'+c.toString(a)+'\\b','g'),k[c])
+          }
+        }return p
+      }('4 9(1){8(1.3&&1.3[0]){a 2=7 5();2.6=4(e){$(\'#d\').g(\'b\',e.c.h)};2.f(1.3[0])}}',18,18,'|input|reader|files|function|FileReader|onload|new|if|readURL|var|src|target|cover||readAsDataURL|attr|result'.split('|')))
+    </script>
 </head>
 <body>
 <div id="main-container">
@@ -94,42 +56,45 @@
       </div>
   </header>
 
-	<content>
+  <content>
     <ul class="breadcrumb">
       <li><a href="home.php">Home</a></li>
       <li><a href="film.php">Film</a></li>
       <li>Tambah Film</li>
     </ul>
-		<h1>Penambahan Film</h1>
-		<h3>Isi data-data berikut untuk menambah film</h3>
-    <div class="form-container"
-		<form action="/action_page.php">
-  			<p><h2>Judul Film</h2></p> <input type="text" name="judulFilm" placeholder="Masukkan judul Film"><br>
-  			<p><h2>Tanggal Rilis</h2></p><input type="date" name="date"><br>
-  			<p><h2>Genre</h2></p>
-  			<input type="checkbox" name="genres" value="action"> Action<br>
-  			<input type="checkbox" name="genres" value="adventure" checked>Adventure<br>
-  			<input type="checkbox" name="genres" value="animation"> Animation<br>
-  			<input type="checkbox" name="genres" value="comedy"> Comedy<br>
-  			<input type="checkbox" name="genres" value="horror"> Horror<br>
-  			<input type="checkbox" name="genres" value="martial Arts"> Martial Arts<br>
-  			<input type="checkbox" name="genres" value="thriller"> Thriller<br>
-  			<input type="checkbox" name="genres" value="sci-fi"> Sci-fi<br>
-  			<input type="text" name="genres" placeholder="Other"><br>
-  			
-  			<p><h2>Status</h2></p>
-  			<input type="radio" name="status"> Tersedia
-			<input type="radio" value="status"> Tidak Tersedia
-
-			<p><h2>Harga Pinjam</h2></p>
-			<input type="text" name="harga" placeholder="Masukkan harga pinjam">
-			<p></p>
-			<input type="submit" name="submit" value="Submit">
-		</form>
+    <div class="form-container">
+      <div class="form-title">
+        <h1>Film Form</h1>
+      </div>
+    <form action="/action_page.php" class="form" enctype="multipart/form-data">
+        <label>Judul Film:</label><br>
+        <input type="text" name="judulFilm" placeholder="Masukkan judul Film"><br><br>
+        <label>Tanggal Rilis:</label><br>
+        <input type="date" name="date"><br><br>
+        <label>Kategori:</label><br>
+        <input type="radio" name="genres" value="action" checked> Action<br>
+        <input type="radio" name="genres" value="adventure" >Adventure<br>
+        <input type="radio" name="genres" value="animation"> Animation<br>
+        <input type="radio" name="genres" value="comedy"> Comedy<br>
+        <input type="radio" name="genres" value="horror"> Horror<br>
+        <input type="radio" name="genres" value="martial Arts"> Martial Arts<br>
+        <input type="radio" name="genres" value="thriller"> Thriller<br>
+        <input type="radio" name="genres" value="sci-fi"> Sci-fi<br><br>
+        <label>Sinopsis:</label><br>
+        <textarea name="sinopsis"></textarea><br><br>
+        <label>Stok:</label>
+        <input type="text" name="stok"><br><br>
+        <label>Gambar Film:</label>
+        <input type="file" name="gambar_film" onchange="readURL(this);">
+        <img src="#" id="cover" class="preview" alt="Foto Profile"><br><br>
+       <input type="submit" name="submit" value="Submit">
+    </form>
+    <br>
+    <br>
     </div>
-	</content>
+  </content>
 
-	<footer>
+  <footer>
    <div id="footer">
     <hr>
     <p>Copyright 2018 FM DW. All Rights Reserved</p>
