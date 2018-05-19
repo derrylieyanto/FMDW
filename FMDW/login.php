@@ -1,14 +1,14 @@
 <?php
 	session_start();
 	include 'connect.php';
-	if (isset($_POST['login'])) {
-		$_SESSION['username'] = $_POST['username'];
-		$_SESSION['pass1'] = $_POST['pass1'];
+	if (isset($_POST['submit'])) {
+		$_SESSION['username'] = $_POST['uname'];
+		
 
-		$user = $_POST['username'];
-		$pass = $_POST['pass1'];
+		$user = $_POST['uname'];
+		$pass = $_POST['psw'];
 
-		$sql = "SELECT username,password FROM user1";
+		$sql = "SELECT * FROM account";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
@@ -114,13 +114,13 @@
 
 		
 		<div class="login-form">
-			<form action="action_page.php" class="form">
+			<form action="login.php" method="post" class="form">
 					<div class="login-title">
 						<label>LOGIN</label>
 					</div>
 	    			<input type="text" placeholder="Enter Username" name="uname" required>
 	    			<input type="password" placeholder="Enter Password" name="psw" required>
-	    			<input type="submit" name="submit" value="LOGIN" onclick="location.href='rent.php'">
+	    			<input type="submit" name="submit" value="LOGIN">
 			</form>
   		</div>
 

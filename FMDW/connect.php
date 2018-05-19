@@ -2,7 +2,7 @@
 $server= 'localhost';
 $username= 'root';
 $password= '';
-$database='71160010';
+$database='fmdw';
 
 // Create connection
 $conn = mysqli_connect($server , $username , $password ,$database );
