@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	include 'connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -180,48 +186,29 @@
 				<input type="text" placeholder="Search.." name="search">
       			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
 			</form>
-			<!--show pictures with names on bottom-->
 
 			<table id="sebatsbro">
 				<tr>
-					<td>
-			          <img id="film_poster" src="images/film1.jpg">
-			          <br/>IT
-			        </td>
+				<?php
+					include 'connect.php';
+					$sql = "SELECT * FROM film";
+					$result = mysqli_query($conn, $sql);
+					$i = 1;
 
-			        <td>
-			          <img id="film_poster" src="images/film2.jpg">
-			          <br/>Kenangan di Perpus
-			        </td>
-
-			        <td><img id="film_poster" src="images/film3.jpg">
-			          <br/>Dilan
-			        </td>
-
-			        <td><img id="film_poster" src="images/film4.jpg">
-			          <br/>Maze Runner
-			        </td>
-				</tr>
-				<tr>
-					<td onclick="location.href='detailFilm.php'">
-					<img id="film_poster" src="images/film5.jpg">
-			          <br/>Black Panther
-			          
-			        </td>
-
-			        <td>
-			          <img id="film_poster" src="images/film6.jpg">
-			          <br/>Jumanji
-			        </td>
-
-			        <td><img id="film_poster" src="images/film7.jpg">
-			          <br/>American Pie
-			        </td>
-
-			        <td><img id="film_poster" src="images/film8.jpg">
-			          <br/>Sex is Zero
-			        </td>
-				</tr>
+					if (mysqli_num_rows($result) > 0) {
+					    // output data of each row
+					    while($row = mysqli_fetch_array($result)) {
+				    		echo "<td onclick=\"location.href='detailFilm.php?id_film=". $row['id_film'] ."'\">". "<img id=\"film_poster\" src=\"images/". $row['gambar_film'] . "\"<br>"  . $row['judul'] . "</td>";
+				    		if (fmod($i,4) == 0 AND mysqli_num_rows($result) != $i ) {
+				    			echo "</tr><tr>";
+				    		}
+				    		if ($i == mysqli_num_rows($result) ) {
+				    			echo "</tr>";
+				    		}
+				    		$i++;
+				   		}
+					}
+				?>
 			</table>
 		</div>
 	</div>	
