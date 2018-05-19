@@ -66,6 +66,10 @@
 			color: #1975bf;
 			font-size: 24px;
 		}
+		.members th.nama-member:hover{
+			color:lightblue;
+			cursor: pointer;
+		}
 		.members th.email-member{
 			vertical-align: top;
 		}
@@ -79,12 +83,21 @@
 			border: 2px solid #1975bf;
 			border-radius: 90px;
 		}
+		.members img:hover{
+			border-color: lightblue;
+			cursor: pointer;
+		}
 		.members button{
 			color: white;
 			font-size: 30px;
 			background-color: red;
 			border-color: red;
 			border-radius: 5px;
+		}
+		.members button:hover{
+			cursor: pointer;
+			background-color: orange;
+			border-color: orange;
 		}
 		.members table:hover{
 			background-color: #ddd;
@@ -137,57 +150,31 @@
 				</ul>
 		</div>
 		<div class="members">
-
-			<table class="member1">
-				<tr>
-					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
-					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
-					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-				</tr>
-				<tr>
-					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
-				</tr>
-			</table>
-			<table class="member2">
-				<tr>
-					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
-					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
-					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-				</tr>
-				<tr>
-					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
-				</tr>
-			</table>
-			<table class="member3">
-				<tr>
-					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
-					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
-					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-				</tr>
-				<tr>
-					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
-				</tr>
-			</table>
-			<table class="member4">
-				<tr>
-					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
-					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
-					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-				</tr>
-				<tr>
-					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
-				</tr>
-			</table>
-			<table class="member5">
-				<tr>
-					<th class="nama-member" onclick="location.href='detailMember.php'">Nama  : Shigeo Tokuda</th>
-					<td rowspan="2"  onclick="location.href='detailMember.php'"><img src="images/mahart.png"></td>
-					<td rowspan="2"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-				</tr>
-				<tr>
-					<th class="email-member" onclick="location.href='detailMember.php'">Email : shigeo69@gmail.com</th>
-				</tr>
-			</table>
+			<?php
+		 		session_start();
+				include 'connect.php';
+		 		$sql = "SELECT * FROM member";
+				$result = mysqli_query($conn, $sql);
+				$i = 1;
+				
+				if (mysqli_num_rows($result) > 0) {
+				    // output data of each row
+				    ?>
+				    <?php
+				    while($row = mysqli_fetch_array($result)) {
+				    	echo "<table>
+								<tr>
+									<th class=\"nama-member\" onclick=\"location.href='detailMember.php'\">Nama  :". $row['nama'] ."</th>
+									<td rowspan=\"2\"  onclick=\"location.href='detailMember.php'\"><img src=\"images/". $row['foto_member'] ."\"></td>
+									<td rowspan=\"2\"><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
+								</tr>
+								<tr>
+									<th class=\"email-member\" onclick=\"location.href='detailMember.php'\">Email : ". $row['email'] ."</th>
+								</tr>
+							</table>";
+				    }
+				}	
+		 	?>
 		</div>
 	</div>
 	</content>
