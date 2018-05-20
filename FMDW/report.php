@@ -18,6 +18,7 @@
 			$("#historis").hide();
 			$("#status").hide().fadeIn(500);
 		}
+		document.getElementById("default-open").click();
 	</script>
 
 	<style type="text/css">
@@ -61,7 +62,6 @@
 			margin: 10px 2px;
 			font-size: 24px;
 		}
-		
 		#status select{
 			margin-left: 415px;
 			font-size: 24px;
@@ -76,10 +76,8 @@
 		table, th, td{
 			border: 1px solid #ddd;
 			border-collapse: collapse;
-			opacity: 0.95;
-			
+			opacity: 0.95;	
 		}
-
 		th, td{
 			padding: 10px;
 			text-align: center;
@@ -94,9 +92,54 @@
 		tr:nth-child(even){
 			background-color: lightblue;
 		}
-
+		.tab{
+			overflow: hidden;
+		}
+		.tab button{
+			background-color: #e9e9e9;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		}
+		.tabcontent{
+			display: none;
+			border-top: none; 
+		}
+		.tab button:hover {
+    		background-color: #ddd;
+    		color: black;
+		}
+		.tab button.active{
+			background-color: white;
+			color: black;
+		}
 		
 	</style>
+
+	<script type="text/javascript">
+	function openTab(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+	</script>
+
 </head>
 <body>
 <div id="main-container">
@@ -134,13 +177,12 @@
 		<div id="wrapper">
 			<div class="title">
 			<h1>REPORT</h1>
-			
-				
-			<button type="button" onclick="Historis();">HISTORIS</button>
-			<button type="button" onclick="Status()">STATUS DVD</button>
-
+				<div class="tab">
+					<button class="tablinks"  type="button" id="default-open" onclick="openTab(event, 'historis')">HISTORIS</button>
+					<button type="button" class="tablinks" onclick="openTab(event, 'statusdvd')">STATUS DVD</button>
+				</div>
 	      	</div>
-      		<div id="historis">
+      		<div id="historis" class="tabcontent">
       			<form class="inline">
 						<select name="filter">
 						    <option value="search_by_no">No</option>
@@ -257,7 +299,7 @@
 			</table>
 			</div>
 
-			<div id="status">
+			<div id="statusdvd" class="tabcontent">
 				<form class="inline">
 						<select name="filter">
 						    <option value="search_by_no">No</option>
@@ -330,5 +372,9 @@
 		</div>
 	</footer>
 </div>
+	<script type="text/javascript">
+		document.getElementById("default-open").click();	
+	</script>
+	
 </body>
 </html>

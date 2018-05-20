@@ -35,7 +35,7 @@
     	width: 960px;
     	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 	}
-		 input[type=submit]{
+	input[type=submit]{
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -55,18 +55,21 @@
       margin: 8px 0;
       font-size: 20px;
     }
+    input[type=password]{
+      width: 55%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 20px;
+    }
     label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-	 }
-
-     input[type=text]:focus{
+	}
+    input[type=text]:focus{
       background-color: lightblue;
     }
-
     .menjorok{
     	padding: 15px;
-
     }
 	</style>
 </head>
@@ -89,7 +92,7 @@
 	  		
   			<div class="search-container">
     			<form action="/action_page.php">
-      				<input type="text" placeholder="Search.." name="search">
+      				<input type="text" placeholder="Search.." name="search" width="">
       				<button type="submit"><i class="fa fa-search"></i></button>
       				<label>Hello. <?php ?></label>
       				<a class="logout" href="#">LOG OUT</a>
