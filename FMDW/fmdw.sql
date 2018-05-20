@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2018 at 09:49 PM
+-- Generation Time: May 20, 2018 at 10:13 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -121,6 +121,29 @@ INSERT INTO `member` (`id_member`, `nama`, `username`, `password`, `email`, `ala
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `status`
+--
+
+CREATE TABLE `status` (
+  `nomor` int(11) NOT NULL,
+  `nama_film` varchar(225) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `status` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `status`
+--
+
+INSERT INTO `status` (`nomor`, `nama_film`, `quantity`, `status`) VALUES
+(1, 'Black Panther', 5, 'Tersedia'),
+(2, 'Pink Panther', 10, 'Tersedia'),
+(3, 'Batman the dark', 0, 'Tidak tersedia'),
+(4, 'Dedpul', 1, 'Tersedia');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `transaksi`
 --
 
@@ -135,6 +158,16 @@ CREATE TABLE `transaksi` (
   `denda` int(11) NOT NULL,
   `total_bayar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `id_film`, `nama_film`, `tanggal_pinjam`, `tanggal_pengembalian`, `harga`, `denda`, `total_bayar`) VALUES
+(1, 1, 1, 'blek pente', '2018-05-16', '2018-05-31', '50000', 0, 50000),
+(2, 2, 2, 'blek', '2018-05-01', '2018-05-02', '25000', 0, 25000),
+(3, 1, 1, 'wakanda foreva', '2018-05-16', '2018-05-31', '50000', 0, 50000),
+(4, 2, 2, 'video jepang', '2018-05-01', '2018-05-02', '25000', 0, 25000);
 
 --
 -- Indexes for dumped tables
@@ -157,6 +190,12 @@ ALTER TABLE `film`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`id_member`);
+
+--
+-- Indexes for table `status`
+--
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`nomor`);
 
 --
 -- Indexes for table `transaksi`
@@ -184,10 +223,15 @@ ALTER TABLE `film`
 ALTER TABLE `member`
   MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
+-- AUTO_INCREMENT for table `status`
+--
+ALTER TABLE `status`
+  MODIFY `nomor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

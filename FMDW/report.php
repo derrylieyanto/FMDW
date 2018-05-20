@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	include 'connect.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -209,7 +215,6 @@
 				</form>
 			<table>
 				<tr>
-					<th>No</th>
 					<th>ID Transaksi</th>
 					<th>ID Barang</th>
 					<th>Nama Barang</th>
@@ -220,90 +225,33 @@
 					<th>Denda</th>
 					<th>Total Harga</th>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>00001</td>
-					<td>1</td>
-					<td>Black Panther</td>
-					<td>001</td>
-					<td>25-02-2018</td>
-					<td>26-02-2018</td>
-					<td>Rp50,000.00</td>
-					<td>Rp -</td>
-					<td>Rp50,000.00</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>00002</td>
-					<td>2</td>
-					<td>Black</td>
-					<td>002</td>
-					<td>25-02-2018</td>
-					<td>26-02-2018</td>
-					<td>Rp25,000.00</td>
-					<td>Rp -</td>
-					<td>Rp25,000.00</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>00003</td>
-					<td>3</td>
-					<td>Panther</td>
-					<td>003</td>
-					<td>25-02-2018</td>
-					<td>26-02-2018</td>
-					<td>Rp30,000.00</td>
-					<td>Rp -</td>
-					<td>Rp30,000.00</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>00004</td>
-					<td>4</td>
-					<td>Wakanda</td>
-					<td>004</td>
-					<td>25-02-2018</td>
-					<td>26-02-2018</td>
-					<td>Rp50,000.00</td>
-					<td>Rp -</td>
-					<td>Rp50,000.00</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>00005</td>
-					<td>5</td>
-					<td>Forever</td>
-					<td>005</td>
-					<td>25-02-2018</td>
-					<td>29-02-2018</td>
-					<td>Rp75,000.00</td>
-					<td>Rp25,000.00</td>
-					<td>Rp100,000.00</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>00006</td>
-					<td>6</td>
-					<td>Hesoyam</td>
-					<td>006</td>
-					<td>25-02-2018</td>
-					<td>26-02-2018</td>
-					<td>Rp70,000.00</td>
-					<td>Rp -</td>
-					<td>Rp70,000.00</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td>00007</td>
-					<td>7</td>
-					<td>IT</td>
-					<td>007</td>
-					<td>25-02-2018</td>
-					<td>26-02-2018</td>
-					<td>Rp50,000.00</td>
-					<td>Rp -</td>
-					<td>Rp50,000.00</td>
-				</tr>
+				<?php
+			        include 'connect.php';
+			        $sql = "SELECT * FROM transaksi";
+			        $result = mysqli_query($conn, $sql);
+			        $i=1;  
+
+			        if (mysqli_num_rows($result) > 0) {
+				    // output data of each row
+				    		?>
+				    <?php
+				    while($row = mysqli_fetch_array($result)) {
+				    	echo "
+								<tr>
+									<td>". $row['id_transaksi'] ."</td>
+									<td>". $row['id_user']."</td> 
+									<td>". $row['id_film']."</td> 
+									<td>". $row['nama_film'] ."</td>
+									<td>". $row['tanggal_pinjam']."</td> 
+									<td>". $row['tanggal_pengembalian']."</td> 
+									<td>". $row['harga'] ."</td>
+									<td>". $row['denda']."</td> 
+									<td>". $row['total_bayar']."</td>
+								</tr>
+							";
+				   					}
+								}
+						     ?>
 			</table>
 			</div>
 
@@ -326,48 +274,28 @@
 					<th>Quantity</th>
 					<th>Status</th>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>Black Panther</td>
-					<td>5</td>
-					<td>Tersedia</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Black</td>
-					<td>5</td>
-					<td>Tersedia</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Panther</td>
-					<td>5</td>
-					<td>Tersedia</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>Wakanda</td>
-					<td>5</td>
-					<td>Tidak Tersedia</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>Forever</td>
-					<td>5</td>
-					<td>Tersedia</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>Hesoyam</td>
-					<td>5</td>
-					<td>Tidak Tersedia</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td>IT</td>
-					<td>5</td>
-					<td>Tidak Tersedia</td>
-				</tr>
+				<?php
+			        include 'connect.php';
+			        $sql = "SELECT * FROM status";
+			        $result = mysqli_query($conn, $sql);
+			        $i=1;  
+
+			        if (mysqli_num_rows($result) > 0) {
+				    // output data of each row
+				    		?>
+				    <?php
+				    while($row = mysqli_fetch_array($result)) {
+				    	echo "
+								<tr>
+									<td>". $row['nomor'] ."</td>
+									<td>". $row['nama_film']."</td> 
+									<td>". $row['quantity']."</td> 
+									<td>". $row['status'] ."</td>
+								</tr>
+							";
+				   					}
+								}
+						     ?>
 			</table>
 		</div>
 		</div>
