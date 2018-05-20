@@ -79,6 +79,9 @@
 		.account th:hover{
 
 		}
+		.account button:hover{
+			background-color: #ff3333;
+		}
 		.account button{
 			color: white;
 			background-color: red;
@@ -86,9 +89,7 @@
 			font-size: 24px;
 			border-radius: 5px;
 		}
-		.account button:hover{
-			background-color: #ff3333;
-		}
+		
 		th{
 			cursor: pointer;
 		}
@@ -134,13 +135,7 @@
 				<div class="title">
 					<h1 class="inline">Account List</h1>
 					<form class="inline" name="sortform"">
-						<!--<select name="sort">
-						  <option value="1">Sort by Number</option>
-						  <option value="2">Sort by Username</option>
-						  <option value="3">Sort by Jabatan</option>
-						</select>-->
-						<input type="text" name="submit_search" placeholder="Search.." name="search" id="myInput" style="width: 200px" onkeyup="searchFunction()">
-		      			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
+						<input type="text" name="submit_search" placeholder="Find username.." name="search" id="myInput" style="width: 250px" onkeyup="searchFunction()">
 					</form>
 					<!--tambah-->
 					<button type="submit" id="add" onclick="location.href='tambahAccount.php'"><i class="fa fa-plus"></i></button></li>
@@ -161,12 +156,12 @@
 
 						        if (mysqli_num_rows($result) > 0) {
 				    // output data of each row
-				    ?>
+				    		?>
 				    <?php
 				    while($row = mysqli_fetch_array($result)) {
 				    	echo "
 								<tr>
-									<th onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['id_account'] ."</th>
+									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['id_account'] ."</td>
 									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['username']."</td> 
 									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['jabatan']."</td> 
 									<td ><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
@@ -187,5 +182,83 @@
 	</div>
 	</footer>
 </div>
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("account-table");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc"; 
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++; 
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+<script>
+function searchFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("account-table");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
 </body>
 </html>
