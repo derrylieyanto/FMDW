@@ -66,12 +66,13 @@
 		}
 		.account table th{
 			padding: 15px 0px;
-			text-align: left;
+			text-align: center;
 		}
 		.account table td{
 			padding: 5px 0px;
 			border-top: 3px solid #ddd;
 			text-align: center;
+			cursor: pointer;
 		}
 		.account tr:hover{
 			background-color: #ddd;
@@ -143,7 +144,7 @@
 				<div class="account">
 					<table id="account-table">
 						<thead>
-							<th onclick="sortTable(0)">No<i class="fas fa-sort"></i></th>
+							<td onclick="sortTable(0)">No<i class="fas fa-sort"></i></td>
 							<td onclick="sortTable(1)" class="th">Username<i class="fas fa-sort"></i></td>
 							<td onclick="sortTable(2)" class="th">Jabatan<i class="fas fa-sort"></i></td>
 							<td></td>
