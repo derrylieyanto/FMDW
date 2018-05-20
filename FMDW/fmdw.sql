@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2018 at 07:13 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: May 20, 2018 at 09:49 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -128,9 +128,12 @@ CREATE TABLE `transaksi` (
   `id_transaksi` int(11) NOT NULL,
   `id_user` int(11) DEFAULT NULL,
   `id_film` int(11) DEFAULT NULL,
+  `nama_film` varchar(225) NOT NULL,
   `tanggal_pinjam` date DEFAULT NULL,
   `tanggal_pengembalian` date DEFAULT NULL,
-  `pembayaran` varchar(225) NOT NULL
+  `harga` varchar(225) NOT NULL,
+  `denda` int(11) NOT NULL,
+  `total_bayar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
