@@ -160,14 +160,12 @@
 				    		?>
 				    <?php
 				    while($row = mysqli_fetch_array($result)) {
-				    	echo "
-								<tr>
-									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['id_account'] ."</td>
-									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['username']."</td> 
-									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['jabatan']."</td> 
-									<td ><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
-								</tr>
-							";
+				    	echo "<tr>";
+						echo "<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['id_account'] ."</td>";
+						echo "<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['username']."</td>";
+						echo "<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['jabatan']."</td>";
+						echo "<td ><button type=\"submit\" onclick=\"location.href='deleteAccount.php?id_account=". $row['id_account'] ."'\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>"; 
+						echo "</tr>";		
 				   					}
 								}
 						     ?>
