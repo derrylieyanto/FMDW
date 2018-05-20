@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2018 at 04:58 PM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- Generation Time: May 20, 2018 at 07:13 PM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -85,6 +85,7 @@ INSERT INTO `film` (`id_film`, `judul`, `kategori`, `tanggal_rilis`, `sinopsis`,
 CREATE TABLE `member` (
   `id_member` int(11) NOT NULL,
   `nama` varchar(225) DEFAULT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(225) DEFAULT NULL,
   `email` varchar(225) DEFAULT NULL,
   `alamat` varchar(225) DEFAULT NULL,
@@ -97,25 +98,25 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`id_member`, `nama`, `password`, `email`, `alamat`, `tanggal_lahir`, `status`, `foto_member`) VALUES
-(1, 'Elvino Revata Lieyanto', 'vinogreatkiller', 'vinogreatkiller.gmail.com', 'Alnect Komputer Janti', '2004-01-24', 'Pelajar', 'member1.jpg'),
-(2, '', '', '', '', '0000-00-00', '', ''),
-(3, '', '', '', '', '0000-00-00', '', ''),
-(4, '', '', '', '', '0000-00-00', '', ''),
-(5, '', '', '', '', '0000-00-00', '', ''),
-(6, '', '', '', '', '0000-00-00', '', ''),
-(7, '', '', '', '', '0000-00-00', '', ''),
-(8, '', '', '', '', '0000-00-00', '', ''),
-(9, '', '', '', '', '0000-00-00', '', ''),
-(10, '', '', '', '', '0000-00-00', '', ''),
-(11, '', '', '', '', '0000-00-00', '', ''),
-(12, '', '', '', '', '0000-00-00', '', ''),
-(13, '', '', '', '', '0000-00-00', '', ''),
-(14, '', '', '', '', '0000-00-00', '', ''),
-(15, '', '', '', '', '0000-00-00', '', ''),
-(16, '', '', '', '', '0000-00-00', '', ''),
-(17, '', '', '', '', '0000-00-00', '', ''),
-(18, 'asda', 'asdad', 'asdasd', 'asdasd', '2018-05-15', 'asdada', 'asdasd');
+INSERT INTO `member` (`id_member`, `nama`, `username`, `password`, `email`, `alamat`, `tanggal_lahir`, `status`, `foto_member`) VALUES
+(1, 'Elvino Revata Lieyanto', 'vinogreatkiller', '123123', 'vinogreatkiller.gmail.com', 'Alnect Komputer Janti', '2004-01-24', 'Pelajar', 'member1.jpg'),
+(2, '', '', '', '', '', '0000-00-00', '', ''),
+(3, '', '', '', '', '', '0000-00-00', '', ''),
+(4, '', '', '', '', '', '0000-00-00', '', ''),
+(5, '', '', '', '', '', '0000-00-00', '', ''),
+(6, '', '', '', '', '', '0000-00-00', '', ''),
+(7, '', '', '', '', '', '0000-00-00', '', ''),
+(8, '', '', '', '', '', '0000-00-00', '', ''),
+(9, '', '', '', '', '', '0000-00-00', '', ''),
+(10, '', '', '', '', '', '0000-00-00', '', ''),
+(11, '', '', '', '', '', '0000-00-00', '', ''),
+(12, '', '', '', '', '', '0000-00-00', '', ''),
+(13, '', '', '', '', '', '0000-00-00', '', ''),
+(14, '', '', '', '', '', '0000-00-00', '', ''),
+(15, '', '', '', '', '', '0000-00-00', '', ''),
+(16, '', '', '', '', '', '0000-00-00', '', ''),
+(17, '', '', '', '', '', '0000-00-00', '', ''),
+(18, 'asda', 'asdad', 'asdad', 'asdasd', 'asdasd', '2018-05-15', 'asdada', 'asdasd');
 
 -- --------------------------------------------------------
 
