@@ -1,29 +1,3 @@
-<?php
-	session_start();
-	include 'connect.php';
-	if(isset($_POST['submit'])){
-
-		$nama = $_POST['nama'];
-		$password = $_POST['password'];
-		$email = $_POST['email'];
-		$alamat = $_POST['alamat'];
-		$tanggal_lahir = $_POST['tanggal_lahir'];
-		$status = $_POST['status'];
-		$foto_member = $_POST['foto_member'];
-
-		$sql = "INSERT INTO member (nama, password, email, alamat, tanggal_lahir, status, foto_member) VALUES ('$nama','$password','$email','$alamat','$tanggal_lahir','$status','$foto_member')";
-
-				if (mysqli_query($conn, $sql)) {
-				    echo "New record created successfully";
-				} else {
-				    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
-			
-
-			mysqli_close($conn);
-}
-	
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,6 +69,26 @@
     	padding: 15px;
 
     }
+    #cancel{
+		  font-family: "Roboto", sans-serif;
+		  text-transform: uppercase;
+		  outline: 0;
+		  background: tomato;
+		  width: 50%;
+		  border: 0;
+		  padding: 15px;
+		  color: #FFFFFF;
+		  font-size: 14px;
+		  -webkit-transition: all 0.3 ease;
+		  transition: all 0.3 ease;
+		  cursor: pointer;
+	}
+	#cancel:hover{
+		  background: red;
+	}
+	#inline{
+		display: inline;
+	}
 	</style>
 </head>
 <body>
@@ -133,34 +127,28 @@
 		</ul>
 
 		<div class="menjorok">
-		<form action="tambahMember.php" method="post" enctype="multipart/form-data">
-		<h4>Full Name</h4>
-		<input type="text" id="nama" required="" name="nama" placeholder="Nama Lengkap"/>
-		<h4>Password</h4>
-		<input type="password" id="password" name="password" placeholder="Password" required=""/>
-		<h4>Email</h4>
-		<input type="text" id="email" name="email" placeholder="Email" required=""/>
-		<h4>Alamat</h4>
-		<input type="text" id="alamat" name="alamat" placeholder="Alamat" required=""/>
-		<h4>Tanggal lahir</h4>
-		<input type="date" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" required=""/>
-		<h4>Status</h4>
-		<input type="text" id="status" name="status" placeholder="Pekerjaan" required=""/>
-		<h4>Foto Profil</h4>
-		<input type="file" name="foto_member" id="foto_member" placeholder="Foto Profil" required=""/>
-		<input type="submit" name="submit" value="Submit"/>
-		<?php
-			if(isset($_POST['submit']) AND isset($_FILES['foto_member'])){
-			$target_dir = "images/";
-			$target_file = $target_dir . basename ($_FILES["foto_member"]["name"]);
-			strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-			$file_temp = $_FILES['foto_member']['tmp_name'];
-			move_uploaded_file($_FILES['foto_member']['tmp_name'], $target_file);
-			echo "file was submitted";
-			}
-		?>
+			<form class="member-form" action="prosesTambahMember.php" method="post" enctype="multipart/form-data">
+				<h4>Full Name</h4>
+				<input type="text" id="nama" required="" name="nama" placeholder="Nama Lengkap"/>
+				<h4>Password</h4>
+				<input type="password" id="password" name="password" placeholder="Password" required=""/>
+				<h4>Email</h4>
+				<input type="text" id="email" name="email" placeholder="Email" required=""/>
+				<h4>Alamat</h4>
+				<input type="text" id="alamat" name="alamat" placeholder="Alamat" required=""/>
+				<h4>Tanggal lahir</h4>
+				<input type="date" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" required=""/>
+				<h4>Status</h4>
+				<input type="text" id="status" name="status" placeholder="Pekerjaan" required=""/>
+				<h4>Foto Profil</h4>
+				<input type="file" name="foto_member" id="foto_member" placeholder="Foto Profil" required=""/>
+				<p></p>
+				<div id="inline">
+					<input type="submit" name="submit" value="Tambah Member">
+					<a id="cancel" onclick="location.href='member.php'">Cancel</a>
+				</div>
+			</form>
 		</div>
-		</form>
 		
 	</content>
 
