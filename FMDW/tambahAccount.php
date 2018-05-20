@@ -1,23 +1,3 @@
-<?php
-	session_start();
-	include 'connect.php';
-	if(isset($_POST['submit'])){
-		$fullname = $_POST['fullname'];
-		$username = $_POST['username'];
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-		$jabatan = $_POST['jabatan'];
-
-		$sql = "INSERT INTO account (fullname, username, email, password, jabatan) VALUES ('$fullname','$username','$email','$password','$jabatan')";
-				if (mysqli_query($conn, $sql)) {
-				    echo "New record created successfully";
-				} else {
-				    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-				}
-			mysqli_close($conn);
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,6 +51,26 @@
     .menjorok{
     	padding: 15px;
     }
+    #cancel{
+		  font-family: "Roboto", sans-serif;
+		  text-transform: uppercase;
+		  outline: 0;
+		  background: tomato;
+		  width: 50%;
+		  border: 0;
+		  padding: 15px;
+		  color: #FFFFFF;
+		  font-size: 14px;
+		  -webkit-transition: all 0.3 ease;
+		  transition: all 0.3 ease;
+		  cursor: pointer;
+	}
+	#cancel:hover{
+		  background: red;
+	}
+	#inline{
+		display: inline;
+	}
 	</style>
 </head>
 <body>
@@ -108,18 +108,23 @@
   		  <li>Tambah Account</li>
 		</ul>
 		<div class="menjorok">
-		<h4>Full name</h4>
-		<input type="text" name="fullname" placeholder="Enter Your Full Name">
-		<h4>Username</h4>
-		<input type="text" name="username" placeholder="Enter Your Username">
-		<h4>EMail</h4>
-		<input type="text" name="email" placeholder="Enter Your Email Address">
-		<h4>Password</h4>
-		<input type="password" name="password" placeholder="Enter Your Password"></br></br>
-		<h4>Jabatan</h4>
-		<input type="text" name="jabatan" placeholder="Enter Your Jabatan"></br></br>
-		<input type="submit" name="submit" value="Tambah Account">
-	</div>
+			<form class="account-form" action="prosesTambahAccount.php" method="post">
+				<h4>Full name</h4>
+				<input type="text" name="nama" placeholder="Enter Your Full Name" required="">
+				<h4>Username</h4>
+				<input type="text" name="username" placeholder="Enter Your Username" required="">
+				<h4>Email</h4>
+				<input type="text" name="email" placeholder="Enter Your Email Address" required="">
+				<h4>Password</h4>
+				<input type="password" name="password" placeholder="Enter Your Password" required=""></br></br>
+				<h4>Jabatan</h4>
+				<input type="text" name="jabatan" placeholder="Enter Your Jabatan" required=""></br></br>
+				<div id="inline">
+					<input type="submit" name="submit" value="Tambah Account">
+					<a id="cancel" onclick="location.href='account.php'">Cancel</a>
+				</div>
+			</form>
+		</div>
 	</content>
 
 	<footer>
