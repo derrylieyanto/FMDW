@@ -57,6 +57,14 @@
 			margin-left: 320px;
 			font-size: 24px;
 			color: gray;
+		}#statusdvd input[type=text], #statusdvd button{
+			margin: 10px 2px;
+			font-size: 24px;
+		}
+		#statusdvd select{
+			margin-left: 416px;
+			font-size: 24px;
+			color: gray;
 		}
 		#status input[type=text], #status button{
 			margin: 10px 2px;
