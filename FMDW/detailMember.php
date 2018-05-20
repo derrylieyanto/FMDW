@@ -19,6 +19,19 @@
     		width: 960px;
     		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 		}
+		button.btn-edit{
+	      font-size: 20px;
+	      float: right;
+	      background-color: #009933;
+	      border-color: #00b33c;
+	      color: white;
+	      padding: 7px;
+	      border-radius: 5px;
+	    }
+	    button.btn-edit:hover{
+	      background-color: #00b33c;
+	      border-color: #009933;
+	    }
 	</style>
 </head>
 <body>
@@ -64,23 +77,79 @@
 		   </li>
 		</ul>
 		<div class="menjorok">
-			<h1>Detail Member</h1>
-			<?php echo '<img class="poster" src="images/'. $row['foto_member'] .'">'; ?>
-			<h3>ID Member : <?php echo $row['id_member']; ?></h3>
+			<h1>Detail Member<button class="btn-edit"><i class="fas fa-edit"> Edit</i></button></h1>
+			<?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo '<img class="poster" src="images/'. $row['foto_member'] .'">';
+		    ?>
+			<h3>ID Member : <?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['id_member']; 
+		     ?></h3>
 			<h2>Nama <i class="fas fa-edit"></i></h2>
-			<?php echo $row['nama']; ?>
+			<?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['nama']; 
+		     ?>
 			<h2>Username <i class="fas fa-edit"></i></h2>
-			<?php echo $row['username']; ?>
+			<?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['username']; 
+		     ?>
 			<h2>Password <i class="fas fa-edit"></i></h2>
-			<?php echo $row['password']; ?>
+			<?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['password']; 
+		     ?>
 			<h2>Email <i class="fas fa-edit"></i></h2>
-			<?php echo $row['email']; ?>
+			<?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['email']; 
+		     ?>
 			<h2>Alamat <i class="fas fa-edit"></i></h2>
-			<?php echo $row['alamat']; ?>
+			<?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['alamat']; 
+		     ?>
 			<h2>Tanggal Lahir <i class="fas fa-edit"></i></h2>
 			<?php echo $row['tanggal_lahir']; ?>
 			<h2>Status <i class="fas fa-edit"></i></h2>
-			<?php echo $row['status']; ?>
+			<?php 
+		        include 'connect.php';
+	    	    $sql = "SELECT * FROM member  WHERE id_member='$id_member'";
+	        	$result = mysqli_query($conn, $sql);
+	          
+		       	while($row = mysqli_fetch_array($result)) 
+		       	echo $row['status']; 
+		     ?>
 			<p></p>
 			<input type="submit" name="submit" value="Save">
 		</div>
