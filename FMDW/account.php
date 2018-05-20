@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
-	<script src="js/tableSort.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<style type="text/css">
 		#wrapper{
@@ -66,6 +65,7 @@
 		.account table td{
 			padding: 5px 0px;
 			border-top: 3px solid #ddd;
+			text-align: center;
 		}
 		.account tr:hover{
 			background-color: #ddd;
@@ -219,24 +219,28 @@ function searchFunction() {
 							<th onclick="sortTable(1)">Username<i class="fas fa-sort"></i></th>
 							<th onclick="sortTable(2)">Jabatan<i class="fas fa-sort"></i></th>
 						</thead>
-						<tr onclick="location.href='account_detail.php'">
-							<td>1</td>
-							<td >Admin0</td>
-							<td>ADMIN</td>
-							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-						</tr>
-						<tr onclick="location.href='account_detail.php'">
-							<td>3</td>
-							<td>Kasir1</td>
-							<td>KASIR</td>
-							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-						</tr>
-						<tr onclick="location.href='account_detail.php'">
-							<td onclick="location.href='account_detail.php'">2</td>
-							<td onclick="location.href='account_detail.php'">ajc98</td>
-							<td onclick="location.href='account_detail.php'">MEMBER</td>
-							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
-						</tr>
+							<?php
+						        include 'connect.php';
+						        $sql = "SELECT * FROM account";
+						        $result = mysqli_query($conn, $sql);
+						        $i=1;  
+
+						        if (mysqli_num_rows($result) > 0) {
+				    // output data of each row
+				    ?>
+				    <?php
+				    while($row = mysqli_fetch_array($result)) {
+				    	echo "<table>
+								<tr>
+									<th onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['id_account'] ."</th>
+									<td onclick=\"location.href='account_detail.php?id_account=". $row['username'] ."'\">". $row['username']."</td> 
+									<td onclick=\"location.href='account_detail.php?id_account=". $row['jabatan'] ."'\">". $row['jabatan']."</td> 
+									<td ><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
+								</tr>
+							</table>";
+				   					}
+								}
+						     ?>
 					</table>
 				
 				</div>	
