@@ -1,3 +1,23 @@
+<?php
+	session_start();
+	include 'connect.php';
+	if(isset($_POST['submit'])){
+		$fullname = $_POST['fullname'];
+		$username = $_POST['username'];
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+		$jabatan = $_POST['jabatan'];
+
+		$sql = "INSERT INTO account (fullname, username, email, password, jabatan) VALUES ('$fullname','$username','$email','$password','$jabatan')";
+				if (mysqli_query($conn, $sql)) {
+				    echo "New record created successfully";
+				} else {
+				    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+				}
+			mysqli_close($conn);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,15 +106,15 @@
 		</ul>
 		<div class="menjorok">
 		<h4>Full name</h4>
-		<input type="text" name="FullName" placeholder="Enter Your Full Name">
+		<input type="text" name="fullname" placeholder="Enter Your Full Name">
 		<h4>Username</h4>
-		<input type="text" name="Username" placeholder="Enter Your Username">
-		<h4>Department</h4>
-		<input type="text" name="Department" placeholder="Enter Your Department">
+		<input type="text" name="username" placeholder="Enter Your Username">
 		<h4>EMail</h4>
-		<input type="text" name="Email" placeholder="Enter Your Email Address">
-		<h4>Phone Number</h4>
-		<input type="text" name="PhoneNumber" placeholder="Enter Your Phone Number"></br></br>
+		<input type="text" name="email" placeholder="Enter Your Email Address">
+		<h4>Password</h4>
+		<input type="password" name="password" placeholder="Enter Your Password"></br></br>
+		<h4>Jabatan</h4>
+		<input type="text" name="jabatan" placeholder="Enter Your Jabatan"></br></br>
 		<input type="submit" name="submit" value="Tambah Account">
 	</div>
 	</content>

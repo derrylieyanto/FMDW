@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2018 at 04:43 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.4
+-- Generation Time: May 20, 2018 at 04:58 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,9 +42,9 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id_account`, `nama`, `username`, `email`, `password`, `jabatan`) VALUES
-(1, '', 'admin1', '', 'admin1', 'admin'),
-(2, '', 'kasir1', '', 'kasir1', 'kasir'),
-(3, '', 'kasir2', '', 'kasir2', 'kasir');
+(1, 'adminsatu', 'admin1', 'sayaadmin1@gmail.com', 'admin1', 'admin'),
+(2, 'kasirsatu', 'kasir1', 'sayakasirsatu@gmail.com', 'kasir1', 'kasir'),
+(3, 'kasirdua', 'kasir2', 'sayakasirdua@gmail.com', 'kasir2', 'kasir');
 
 -- --------------------------------------------------------
 
@@ -169,25 +169,21 @@ ALTER TABLE `transaksi`
 --
 ALTER TABLE `account`
   MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `film`
 --
 ALTER TABLE `film`
   MODIFY `id_film` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
   MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
