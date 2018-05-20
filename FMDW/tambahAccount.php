@@ -85,7 +85,7 @@
   		  <li>Tambah Account</li>
 		</ul>
 		<div class="menjorok">
-		<h4>Full Name</h4>
+		<h4>Full name</h4>
 		<input type="text" name="FullName" placeholder="Enter Your Full Name">
 		<h4>Username</h4>
 		<input type="text" name="Username" placeholder="Enter Your Username">

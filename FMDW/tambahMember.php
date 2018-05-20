@@ -61,6 +61,27 @@
       margin: 8px 0;
       font-size: 20px;
     }
+    input[type=password]{
+      width: 55%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 20px;
+    }
+
+    input[type=date]{
+      width: 55%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 20px;
+    }
+
+    input[type=file]{
+      width: 55%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      font-size: 20px;
+    }
+
     label {
     padding: 12px 12px 12px 0;
     display: inline-block;
@@ -113,13 +134,19 @@
 
 		<div class="menjorok">
 		<form action="tambahMember.php" method="post" enctype="multipart/form-data">
+		<h4>Full Name</h4>
 		<input type="text" id="nama" required="" name="nama" placeholder="Nama Lengkap"/>
+		<h4>Password</h4>
 		<input type="password" id="password" name="password" placeholder="Password" required=""/>
+		<h4>Email</h4>
 		<input type="text" id="email" name="email" placeholder="Email" required=""/>
+		<h4>Alamat</h4>
 		<input type="text" id="alamat" name="alamat" placeholder="Alamat" required=""/>
+		<h4>Tanggal lahir</h4>
 		<input type="date" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" required=""/>
+		<h4>Status</h4>
 		<input type="text" id="status" name="status" placeholder="Pekerjaan" required=""/>
-		<label>Foto profil</label>
+		<h4>Foto Profil</h4>
 		<input type="file" name="foto_member" id="foto_member" placeholder="Foto Profil" required=""/>
 		<input type="submit" name="submit" value="submit"/>
 		</div>
