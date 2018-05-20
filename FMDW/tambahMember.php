@@ -148,9 +148,20 @@
 		<input type="text" id="status" name="status" placeholder="Pekerjaan" required=""/>
 		<h4>Foto Profil</h4>
 		<input type="file" name="foto_member" id="foto_member" placeholder="Foto Profil" required=""/>
-		<input type="submit" name="submit" value="submit"/>
+		<input type="submit" name="submit" value="Submit"/>
+		<?php
+			if(isset($_POST['submit']) AND isset($_FILES['foto_member'])){
+			$target_dir = "images/";
+			$target_file = $target_dir . basename ($_FILES["foto_member"]["name"]);
+			strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+			$file_temp = $_FILES['foto_member']['tmp_name'];
+			move_uploaded_file($_FILES['foto_member']['tmp_name'], $target_file);
+			echo "file was submitted";
+			}
+		?>
 		</div>
 		</form>
+		
 	</content>
 
 	<footer>
