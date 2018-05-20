@@ -92,6 +92,10 @@
 		th{
 			cursor: pointer;
 		}
+		.th{
+			cursor: pointer;
+			font-weight: bold;
+		}
 	</style>
 </head>
 <body>
@@ -145,8 +149,9 @@
 					<table id="account-table">
 						<thead>
 							<th onclick="sortTable(0)">No<i class="fas fa-sort"></i></th>
-							<th onclick="sortTable(1)">Username<i class="fas fa-sort"></i></th>
-							<th onclick="sortTable(2)">Jabatan<i class="fas fa-sort"></i></th>
+							<td onclick="sortTable(1)" class="th">Username<i class="fas fa-sort"></i></td>
+							<td onclick="sortTable(2)" class="th">Jabatan<i class="fas fa-sort"></i></td>
+							<td></td>
 						</thead>
 							<?php
 						        include 'connect.php';
@@ -159,14 +164,14 @@
 				    ?>
 				    <?php
 				    while($row = mysqli_fetch_array($result)) {
-				    	echo "<table>
+				    	echo "
 								<tr>
 									<th onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['id_account'] ."</th>
-									<td onclick=\"location.href='account_detail.php?id_account=". $row['username'] ."'\">". $row['username']."</td> 
-									<td onclick=\"location.href='account_detail.php?id_account=". $row['jabatan'] ."'\">". $row['jabatan']."</td> 
+									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['username']."</td> 
+									<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['jabatan']."</td> 
 									<td ><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
 								</tr>
-							</table>";
+							";
 				   					}
 								}
 						     ?>
