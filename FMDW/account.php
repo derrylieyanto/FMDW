@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style/header.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
+	<script src="js/tableSort.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 		#wrapper{
@@ -69,6 +70,9 @@
 		.account tr:hover{
 			background-color: #ddd;
 		}
+		.account th:hover{
+
+		}
 		.account button{
 			color: white;
 			background-color: red;
@@ -79,7 +83,87 @@
 		.account button:hover{
 			background-color: #ff3333;
 		}
+		th{
+			cursor: pointer;
+		}
 	</style>
+	<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("account-table");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc"; 
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++; 
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function searchFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("account-table");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
 </head>
 <body>
 <div id="main-container">
@@ -116,24 +200,24 @@
 			<div id="wrapper">
 				<div class="title">
 					<h1 class="inline">Account List</h1>
-					<form class="inline">
-						<select name="filter">
-						  <option value="filter_by_uname">Filter by Username</option>
-						  <option value="filter_by_no">Filter by number</option>
-						  <option value="filter_by_jabatan">Filter by Jabatan</option>
-						</select>
-						<input type="text" placeholder="Search.." name="search">
+					<form class="inline" name="sortform"">
+						<!--<select name="sort">
+						  <option value="1">Sort by Number</option>
+						  <option value="2">Sort by Username</option>
+						  <option value="3">Sort by Jabatan</option>
+						</select>-->
+						<input type="text" name="submit_search" placeholder="Search.." name="search" id="myInput" style="width: 200px" onkeyup="searchFunction()">
 		      			<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
 					</form>
 					<!--tambah-->
 					<button type="submit" id="add" onclick="location.href='tambahAccount.php'"><i class="fa fa-plus"></i></button></li>
 				</div>
 				<div class="account">
-					<table>
+					<table id="account-table">
 						<thead>
-							<th>No</th>
-							<th>Username</th>
-							<th>Jabatan</th>
+							<th onclick="sortTable(0)">No<i class="fas fa-sort"></i></th>
+							<th onclick="sortTable(1)">Username<i class="fas fa-sort"></i></th>
+							<th onclick="sortTable(2)">Jabatan<i class="fas fa-sort"></i></th>
 						</thead>
 						<tr onclick="location.href='account_detail.php'">
 							<td>1</td>
@@ -142,18 +226,19 @@
 							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr onclick="location.href='account_detail.php'">
-							<td>2</td>
+							<td>3</td>
 							<td>Kasir1</td>
 							<td>KASIR</td>
 							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 						<tr onclick="location.href='account_detail.php'">
-							<td onclick="location.href='account_detail.php'">3</td>
+							<td onclick="location.href='account_detail.php'">2</td>
 							<td onclick="location.href='account_detail.php'">ajc98</td>
 							<td onclick="location.href='account_detail.php'">MEMBER</td>
 							<td class="remove-acc"><button type="submit" class="remove"><i class="fa fa-trash"></i></button></td>
 						</tr>
 					</table>
+				
 				</div>	
 			</div>
 	</content>
