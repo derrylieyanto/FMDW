@@ -95,7 +95,7 @@
       				<input type="text" placeholder="Search.." name="search" width="">
       				<button type="submit"><i class="fa fa-search"></i></button>
       				<label>Hello. <?php ?></label>
-      				<a class="logout" href="#">LOG OUT</a>
+      				<a class="logout" href="login.php">LOG OUT</a>
     			</form>
   			</div>
   		</div>
