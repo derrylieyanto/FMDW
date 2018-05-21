@@ -152,7 +152,12 @@
 			      		<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
 			      	</form>
 			    </li>
-			    <li><button type="submit" id="add" onclick="location.href='tambahMember.php'"><i class="fa fa-plus"></i></button></li>
+			    <?php
+			    	if ($_SESSION['jabatan']==="admin") {
+			    		echo '<li><button type="submit" id="add" onclick="location.href=\'tambahMember.php\'"><i class="fa fa-plus"></i></button></li>';
+			    	}
+			    ?>
+			    
 				</ul>
 		</div>
 		<div class="members">
@@ -166,16 +171,18 @@
 				    ?>
 				    <?php
 				    while($row = mysqli_fetch_array($result)) {
-				    	echo "<table>
-								<tr>
-									<th class=\"nama-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Nama  :". $row['nama'] ."</th>
-									<td rowspan=\"2\"  onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\"><img src=\"images/". $row['foto_member'] ."\"></td>
-									<td rowspan=\"2\"><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
-								</tr>
-								<tr>
-									<th class=\"email-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Email : ". $row['email'] ."</th>
-								</tr>
-							</table>";
+				    	echo "<table>";
+						echo		"<tr>";
+						echo			"<th class=\"nama-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Nama  :". $row['nama'] ."</th>";
+						echo 		"<td rowspan=\"2\"  onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\"><img src=\"images/". $row['foto_member'] ."\"></td>";
+						echo		"<td rowspan=\"2\"><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td></tr>";
+						echo	"<tr>";
+						if ($_SESSION['jabatan']==="admin") {
+							echo	"<th class=\"email-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Email : ". $row['email'] ."</th>";
+						}
+						
+						echo	"</tr>"
+						echo	"</table>";
 				    }
 				}	
 		 	?>

@@ -147,8 +147,14 @@
       
     </div>
     <div class="column content">
-      <button class="remove" onclick="location.href='deleteFilm.php?id_film=<?php echo $row['id_film']; ?>'"><i class="fa fa-trash"></i></button>
-      <button class="btn-edit" onclick="location.href='editFilm.php?id_film=<?php echo $row['id_film']; ?>'"><i class="fas fa-edit"> Edit</i></button>
+      <?php 
+        if ($_SESSION['jabatan']==="admin") {
+          echo '<button class="remove" onclick="location.href=\'deleteFilm.php?id_film='.$row['id_film'].'\'"><i class="fa fa-trash"></i></button>';
+          echo '<button class="btn-edit" onclick="location.href=\'editFilm.php?id_film='.$row['id_film'].'\'"><i class="fas fa-edit"> Edit</i></button>';
+        }
+      ?>
+      
+      
       <table>
         
         <tr>

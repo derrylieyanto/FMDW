@@ -176,7 +176,7 @@
 			<!--tambah-->
 			<div class="inline">
 				<?php 
-					if (if ($_SESSION['jabatan']==="admin")) {
+					if ($_SESSION['jabatan']==="admin") {
 						echo '<button class="tambah-film" type="button" onclick="location.href=\'tambahFilmForm.php\'"><i class="fa fa-plus-square"></i></button>';
 					}
 				?>
