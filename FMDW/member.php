@@ -132,7 +132,7 @@
       				<input type="text" placeholder="Search.." name="search">
       				<button type="submit"><i class="fa fa-search"></i></button>
       				<label>Hello. <?php ?></label>
-      				<a class="logout" href="#">LOG OUT</a>
+      				<a class="logout" href="logout">LOG OUT</a>
     			</form>
   			</div>
   		</div>
