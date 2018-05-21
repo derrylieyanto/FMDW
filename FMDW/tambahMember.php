@@ -1,3 +1,68 @@
+<?php
+  session_start();
+  include 'connect.php';
+
+  if (isset($_POST['submit'])) {
+    $target_dir = "images/";
+    $target_file = $target_dir . basename($_FILES["foto_member"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    // Check if image file is a actual image or fake image
+        $check = getimagesize($_FILES["foto_member"]["tmp_name"]);
+        if($check !== false) {
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+  
+    // Allow certain file formats
+    if($imageFileType != "jpg"  && $imageFileType != "jpeg") {
+        echo "Sorry, only JPG and JPEG files are allowed.";
+        $uploadOk = 0;
+    }
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["foto_member"]["tmp_name"], $target_file)) {
+            $Upload =  "The file ". basename( $_FILES["foto_member"]["name"]). " has been uploaded.";
+        } else {
+            $Upload = "Sorry, there was an error uploading your file.";
+        }
+    }
+
+    $nama = $_POST['nama'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
+	$tanggal_lahir = $_POST['tanggal_lahir'];
+	$status = $_POST['status'];
+    $foto_member = basename($_FILES["foto_member"]["name"]);
+
+    $sql = "INSERT INTO film (nama, username, password, email, foto_member, alamat, tanggal_lahir, status)
+    VALUES ('$nama', '$username', '$password', '$email', '$foto_member', '$alamat', '$tanggal_lahir', '$status')";
+
+    if (mysqli_query($conn, $sql)) {
+          $database =  "New record created successfully";
+    } else {
+          $database = "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+
+    echo '<script type="text/javascript">alert("'.$Upload.'<br>'.$database.'");</script>';
+
+   
+  }
+
+    
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,6 +155,15 @@
 		display: inline;
 	}
 	</style>
+	<script type="text/javascript">
+      eval(function(p,a,c,k,e,d){
+        while(c--){
+          if(k[c]){
+            p=p.replace(new RegExp('\\b'+c.toString(a)+'\\b','g'),k[c])
+          }
+        }return p
+      }('4 9(1){8(1.3&&1.3[0]){a 2=7 5();2.6=4(e){$(\'#d\').g(\'b\',e.c.h)};2.f(1.3[0])}}',18,18,'|input|reader|files|function|FileReader|onload|new|if|readURL|var|src|target|cover||readAsDataURL|attr|result'.split('|')))
+    </script>
 </head>
 <body>
 <div id="main-container">
@@ -127,7 +201,7 @@
 		</ul>
 
 		<div class="menjorok">
-			<form class="member-form" action="prosesTambahMember.php" method="post" enctype="multipart/form-data">
+			<form class="member-form" action="tambahMember.php" method="post" enctype="multipart/form-data">
 				<h4>Full Name</h4>
 				<input type="text" id="nama" required="" name="nama" placeholder="Nama Lengkap"/>
 				<h4>Password</h4>
@@ -139,9 +213,9 @@
 				<h4>Tanggal lahir</h4>
 				<input type="date" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" required=""/>
 				<h4>Status</h4>
-				<input type="text" id="status" name="status" placeholder="Pekerjaan" required=""/>
+				<input type="text" id="status" name="status" placeholder="Status" required=""/>
 				<h4>Foto Profil</h4>
-				<input type="file" name="foto_member" id="foto_member" placeholder="Foto Profil" required=""/>
+				<input type="file" name="foto_member" id="foto_member" onchange="readURL(this);" required=""/>
 				<p></p>
 				<div id="inline">
 					<input type="submit" name="submit" value="Tambah Member">
