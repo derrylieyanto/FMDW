@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Detail Film</title>
+	<title>Detail Film</title>
   <link rel="stylesheet" type="text/css" href="style/header.css">
   <link rel="stylesheet" type="text/css" href="style/footer.css">
   <link rel="stylesheet" type="text/css" href="style/breadcrumb.css">
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <style type="text/css">
     .container{
-      padding: 35px;
+      padding: 15px;
       margin: auto;
       width: 960px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -37,9 +37,6 @@
       clear: both;
     }
     .gambar img{
-      border: 3px solid #1975bf;
-      padding: 5px;
-      border-radius: 5px;
       width: 100%;
       height: 100%;
     }
@@ -56,27 +53,13 @@
     .content th{
       color: #1975bf; 
       padding-left: 30px;
-      padding-right: 10px;
+      padding-right: 15px;
       text-align: left;
       vertical-align: top;
       height: 30px;
     }
     .content td{
       vertical-align: top;
-      padding-right: 10px;
-    }
-    button.remove{
-      margin-left: 10px; 
-      color: white;
-      float: right;
-      padding: 5px 8px;
-      font-size: 24px;
-      background-color: red;
-      border-color: red;
-      border-radius: 5px;
-    }
-    button.remove:hover{
-      background-color: #ff3333;
     }
     button.btn-edit{
       font-size: 20px;
@@ -91,7 +74,6 @@
       background-color: #00b33c;
       border-color: #009933;
     }
-    
     
   </style>
 </head>
@@ -117,14 +99,21 @@
               <input type="text" placeholder="Search.." name="search">
               <button type="submit"><i class="fa fa-search"></i></button>
               <label>Hello. <?php ?></label>
-              <a class="logout" href="#">LOG OUT</a>
+              <a class="logout" href="logout.php">LOG OUT</a>
           </form>
         </div>
       </div>
   </header>
 
 <content>
-  <?php
+	<ul class="breadcrumb">
+    <li><a href="home.php">Home</a></li>
+    <li><a href="film.php">Film</a></li>
+    <li>Black Panther</li>
+  </ul>
+<div class="container">
+  <div class="row">
+    <?php
           include 'connect.php';
           $sql = "SELECT * FROM film  WHERE id_film='$id_film'";
           $result = mysqli_query($conn, $sql);
@@ -134,46 +123,32 @@
           
           
      ?>
-  <ul class="breadcrumb">
-    <li><a href="home.php">Home</a></li>
-    <li><a href="film.php">Film</a></li>
-    <li><?php echo $row['judul']; ?></li>
-  </ul>
-<div class="container">
-  <div class="row">
-    
     <div class="column gambar">
       <?php echo '<img class="poster" src="images/'. $row['gambar_film'] .'">'; ?>
       
     </div>
     <div class="column content">
-      <button class="remove" onclick="location.href='deleteFilm.php?id_film=<?php echo $row['id_film']; ?>'"><i class="fa fa-trash"></i></button>
       <button class="btn-edit"><i class="fas fa-edit"> Edit</i></button>
       <table>
         
         <tr>
-          <th>Judul</th>
-          <td>:</td>
+          <th>Judul:</th>
           <td><?php echo $row['judul']; ?></td>
         </tr>
         <tr>
-          <th>Kategori</th>
-          <td>:</td>
+          <th>Kategori:</th>
           <td><?php echo $row['kategori']; ?></td>
         </tr>
         <tr>
-          <th>Tanggal_Rilis</th>
-          <td>:</td>
+          <th>Tanggal_Rilis:</th>
           <td><?php echo $row['tanggal_rilis']; ?></td>
         </tr>
         <tr>
-          <th>Sinopsis</th>
-          <td>:</td>
+          <th>Sinopsis:</th>
           <td><?php echo $row['sinopsis']; ?></td>
         </tr>
         <tr>
-          <th>Stock</th>
-          <td>:</td>
+          <th>Stock:</th>
           <td><?php echo $row['stok'];} ?></td>
         </tr>
       </table>
