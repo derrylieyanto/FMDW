@@ -181,7 +181,7 @@
 							echo	"<th class=\"email-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Email : ". $row['email'] ."</th>";
 						}
 						
-						echo	"</tr>"
+						echo	"</tr>";
 						echo	"</table>";
 				    }
 				}	
