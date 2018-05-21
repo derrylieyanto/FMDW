@@ -19,61 +19,24 @@
           }
 
 
-  if (isset($_POST['submit'])) {
-    $target_dir = "images/";
-    $target_file = $target_dir . basename($_FILES["gambar_film"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-    // Check if image file is a actual image or fake image
-        $check = getimagesize($_FILES["gambar_film"]["tmp_name"]);
-        if($check !== false) {
-            $uploadOk = 1;
-        } else {
-            echo "File is not an image.";
-            $uploadOk = 0;
-        }
-  
-    // Allow certain file formats
-    if($imageFileType != "jpg"  && $imageFileType != "jpeg") {
-        echo "Sorry, only JPG and JPEG files are allowed.";
-        $uploadOk = 0;
-    }
-    // Check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-        echo "Sorry, your file was not uploaded.";
-    // if everything is ok, try to upload file
-    } else {
-        if (move_uploaded_file($_FILES["gambar_film"]["tmp_name"], $target_file)) {
-            $Upload =  "The file ". basename( $_FILES["gambar_film"]["name"]). " has been uploaded.";
-        } else {
-            $Upload = "Sorry, there was an error uploading your file.";
-        }
-    }
-
-
-
-
-    $judul = $_POST['judulFilm'];
-    $kategori = $_POST['genres'];
-    $tanggal_rilis = $_POST['date'];
-    $sinopsis = $_POST['sinopsis'];
-    $stok = $_POST['stok'];
-
-    $sql = "UPDATE film INTO film (judul, kategori, tanggal_rilis, sinopsis, gambar_film, stok)
-    VALUES ('$judul', '$kategori', '$tanggal_rilis', '$sinopsis', '$gambar_film', '$stok')";
-
-    if (mysqli_query($conn, $sql)) {
-          $database =  "New has been updated successfully";
-    } else {
-          $database = "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-
-    mysqli_close($conn);
-
-    echo '<script type="text/javascript">alert("'$database'");</script>';
-
    
+
+    if (isset($_POST['submit'])) {
+    
+        $judul = $_POST['judulFilm'];
+        $kategori = $_POST['genres'];
+        $tanggal_rilis = $_POST['date'];
+        $sinopsis = $_POST['sinopsis'];
+        $stok = $_POST['stok'];
+
+        $sql = "UPDATE film SET judul='$judul', kategori='$kategori', tanggal_rilis='$tanggal_rilis', sinopsis = '$sinopsi', stok = '$stok' WHERE film.id_film = '$id_film'";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "delete successfully";
+            header("location:film.php");
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
   }
 
     
@@ -149,7 +112,7 @@
       <div class="form-title">
         <h1>Film Form</h1>
       </div>
-    <form action="tambahFilmForm.php" method="post" class="form" enctype="multipart/form-data">
+    <form action="editFilm.php" method="post" class="form" enctype="multipart/form-data">
         <label>Judul Film:</label><br>
         <input type="text" name="judulFilm" placeholder="Masukkan judul Film" required value="<?php echo $judul; ?>"><br><br>
         <label>Tanggal Rilis:</label><br>
