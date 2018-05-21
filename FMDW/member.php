@@ -175,11 +175,11 @@
 						echo		"<tr>";
 						echo			"<th class=\"nama-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Nama  :". $row['nama'] ."</th>";
 						echo 		"<td rowspan=\"2\"  onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\"><img src=\"images/". $row['foto_member'] ."\"></td>";
-						echo		"<td rowspan=\"2\"><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td></tr>";
-						echo	"<tr>";
 						if ($_SESSION['jabatan']==="admin") {
-							echo	"<th class=\"email-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Email : ". $row['email'] ."</th>";
+							echo		"<td rowspan=\"2\"><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td></tr>";
 						}
+						echo	"<tr>";
+							echo	"<th class=\"email-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Email : ". $row['email'] ."</th>";
 						
 						echo	"</tr>";
 						echo	"</table>";
