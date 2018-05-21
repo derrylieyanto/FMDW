@@ -15,6 +15,8 @@
 		    // output data of each row
 		    while($row = mysqli_fetch_assoc($result)) {
 		    	if ($row["username"]==$user AND $row["password"]==$pass) {
+		    		$_SESSION['jabatan'] = $row['jabatan'];
+		    		$_SESSION['nama'] = $row['nama'];
 		    		header("location:home.php");
 		    	}
 		    }

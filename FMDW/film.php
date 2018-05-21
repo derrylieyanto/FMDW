@@ -130,7 +130,7 @@
     			<form action="/action_page.php">
       				<input type="text" placeholder="Search.." name="search">
       				<button type="submit"><i class="fa fa-search"></i></button>
-      				<label>Hello. <?php echo $_SESSION['username']?></label>
+      				<label>Hello. <?php echo $_SESSION['nama']?></label>
       				<a class="logout" href="logout.php">LOG OUT</a>
     			</form>
   			</div>
@@ -175,7 +175,12 @@
 			</div>
 			<!--tambah-->
 			<div class="inline">
-					<button class="tambah-film" type="button" onclick="location.href='tambahFilmForm.php'"><i class="fa fa-plus-square"></i></button>
+				<?php 
+					if (if ($_SESSION['jabatan']==="admin")) {
+						echo '<button class="tambah-film" type="button" onclick="location.href=\'tambahFilmForm.php\'"><i class="fa fa-plus-square"></i></button>';
+					}
+				?>
+					
 			</div>
 			<form>
 				<select name="sortby">

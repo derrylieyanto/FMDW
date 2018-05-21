@@ -121,7 +121,7 @@
     			<form action="/action_page.php">
       				<input type="text" placeholder="Search.." name="search">
       				<button type="submit"><i class="fa fa-search"></i></button>
-      				<label>Hello. <?php echo $_SESSION['username']?></label>
+      				<label>Hello. <?php echo $_SESSION['nama']?></label>
       				<a class="logout" href="logout.php">LOG OUT</a>
     			</form>
   			</div>
@@ -138,8 +138,12 @@
 					<form class="inline" name="sortform"">
 						<input type="text" name="submit_search" placeholder="Find username.." name="search" id="myInput" style="width: 250px" onkeyup="searchFunction()">
 					</form>
-					<!--tambah-->
-					<button type="submit" id="add" onclick="location.href='tambahAccount.php'"><i class="fa fa-plus"></i></button></li>
+					<?php
+						if ($_SESSION['jabatan']==="admin") {
+							echo '<button type="submit" id="add" onclick="location.href=\'tambahAccount.php\'"><i class="fa fa-plus"></i></button></li>';
+						}
+					?>
+					
 				</div>
 				<div class="account">
 					<table id="account-table">
@@ -164,7 +168,10 @@
 						echo "<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['id_account'] ."</td>";
 						echo "<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['username']."</td>";
 						echo "<td onclick=\"location.href='account_detail.php?id_account=". $row['id_account'] ."'\">". $row['jabatan']."</td>";
-						echo "<td ><button type=\"submit\" onclick=\"location.href='deleteAccount.php?id_account=". $row['id_account'] ."'\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>"; 
+						if ($_SESSION['jabatan']==="admin") {
+							echo "<td ><button type=\"submit\" onclick=\"location.href='deleteAccount.php?id_account=". $row['id_account'] ."'\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>"; 
+						}
+						
 						echo "</tr>";		
 				   					}
 								}
