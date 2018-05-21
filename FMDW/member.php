@@ -170,7 +170,7 @@
 								<tr>
 									<th class=\"nama-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Nama  :". $row['nama'] ."</th>
 									<td rowspan=\"2\"  onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\"><img src=\"images/". $row['foto_member'] ."\"></td>
-									<td rowspan=\"2\"><button type=\"submit\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
+									<td rowspan=\"2\"><button type=\"submit\" location.href='deleteMember.php?id_member=". $row['id_member'] ."'\" class=\"remove\"><i class=\"fa fa-trash\"></i></button></td>
 								</tr>
 								<tr>
 									<th class=\"email-member\" onclick=\"location.href='detailMember.php?id_member=". $row['id_member'] ."'\">Email : ". $row['email'] ."</th>
